@@ -1,0 +1,26 @@
+.outer {
+    position: relative;       /*musi być inny niż static */
+    height: 400px;
+    width: 400px;
+    border: 8px solid #666360; 
+    background-color: #a6a9b6;
+}
+
+.inner{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 200px;
+    width: 200px;
+    background-color: #e4e4e4;
+}
+
+.inner--decor{
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+     height: 200px;
+    width: 200px;
+    background-color: coral;
+}
