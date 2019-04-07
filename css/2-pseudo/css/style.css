@@ -1,0 +1,13 @@
+.akapit::before {
+    content: 'PRZED TEKSTEM';
+    color: red; 
+}
+
+.akapit::after {
+    content: "Tekst dodany za tekstem";
+    color: green;
+}
+
+.akapit::first-line { 
+    color: lawngreen;
+}
