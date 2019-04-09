@@ -13,6 +13,7 @@ form {
 
 label {
     display: block;
+padding: 2%;
 }
 
 label[for="male"], 
