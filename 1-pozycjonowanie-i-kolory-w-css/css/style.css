@@ -1,0 +1,56 @@
+div[title^="kwadrat"]
+{
+height: 100px;  
+width: 100px;
+position: relative;
+}
+
+div[title^="kolo"]
+{
+height: 50%;  
+width: 50%;
+border-radius: 50%;
+border: 1px solid black;
+margin: 25px 25px;
+position: absolute;
+}
+
+div[title^="row"]{
+display: inline-block;
+
+}
+div[title$="czerwony"]{
+    background: red;
+}
+
+div[title$="niebieski"]{
+    background: blue;
+}
+
+div[title$="zielony"]{
+    background: green;
+}
+
+div[title$="zolty"]{
+    background: yellow;
+}
+
+div[title$="czarny"]{
+    background: black;
+}
+
+div[title$="pomaranczowy"]{
+    background: orange;
+}
+
+div[title$="fioletowy"]{
+    background: purple;
+}
+
+div[title$="szary"]{
+    background: grey;
+}
+
+div[title$="rozowy"]{
+    background: pink;
+}
