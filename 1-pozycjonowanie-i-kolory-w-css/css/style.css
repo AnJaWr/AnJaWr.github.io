@@ -15,7 +15,7 @@ margin: 25px 25px;
 position: absolute;
 }
 
-div[title^="row"]{
+div[title^="coll"]{
 display: inline-block;
 
 }
