@@ -9,33 +9,34 @@ label{
     display: block;
 }
 
-label[for="male"],
-label[for="female"] {
-display: inline-block; 
+label[for="gender"],
+label[for="agree"] {
+    display: inline-block;
+    padding: 1%;
 }
 
 
 form {
-width: 45%;
-background-color:  rgba(107, 10, 70, 0.8);
-margin: 5px, 15px;
-padding: 2%;
+    width: 45%;
+    background-color:  rgba(107, 10, 70, 0.8);
+    margin: 5px, 15px;
+    padding: 2%;
 }
 
 input[type="text"], 
 input[type="email"],
 input[type="tel"],
 select {
-display: block;
-margin: 5px;
-width:45%;
-padding: 1%;
-border: none;
-border-radius: 25px;
+    display: block;
+    margin: 5px;
+    width:45%;
+    padding: 1%;
+    border: none;
+    border-radius: 25px;
 } 
 
-input[type="radius"]{
-color: rgb(255, 153, 255); 
+input[type="radius"] {
+    color: rgb(255, 153, 255); 
 }
 
 input:focus {
