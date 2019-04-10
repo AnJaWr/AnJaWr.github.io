@@ -39,6 +39,7 @@ input[type="radius"] {
     color: rgb(255, 153, 255); 
 }
 
+select:focus,
 input:focus {
     color: #000;
     outline: 0;
