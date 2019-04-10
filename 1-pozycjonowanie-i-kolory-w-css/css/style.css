@@ -3,6 +3,7 @@ div[title^="kwadrat"]
 height: 100px;  
 width: 100px;
 position: relative;
+margin-bottom: 3px;
 }
 
 div[title^="kolo"]
