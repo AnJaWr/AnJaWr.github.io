@@ -11,8 +11,8 @@
 <div>
 <h1>Prosty formularz</h1>
 <h2>Podstawy</h2>
-<form action="https://formspree.io/annawrobel.ogrodowa@gmail.com" method="POST">
-    <fieldset id="Customer" autocomplete="on">
+<form action="https://formspree.io/annawrobel.ogrodowa@gmail.com" method="POST" autocomplete="on">
+    <fieldset id="Customer">
         <legend>Customer info:</legend>
         <label for="name">Name: </label><input type="text" name="name" id="name" placeholder="Eneter your name" size="50" autofocus required><br>
         <label for="phone">Telehone: </label> <input type="tel" name="phone" id="phone" size="50" pattern="[0-9]-[0-9]{3}-[0-9]{3}-[0-9]{4}]" placeholder="Pattern: 1-234-567-8910"><br>
@@ -30,7 +30,7 @@
           <option value="Orson S. Card 'Gra Endera'">
         </datalist>          
         
-        <label for="quanity">Quanity (Maksimum 5): </label>
+        <label for="quantity">Quanity (Maksimum 5): </label>
         <input type="number" id="quantity" name="quantity" min="1" max="5">
     </fieldset>
     <br>
