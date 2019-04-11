@@ -21,7 +21,7 @@
     </fieldset>
     <fieldset id="Order">
         <legend>Books:</legend>
-        <input list="books" size="50" required>
+        <input list="books" size="50" required title="Wybierz książkę">
         <datalist id="books">
           <option value="Wiliam Gibbson 'Neuromancer'">
           <option value="Richard Morgan 'Modyfikowany węgiel'">
@@ -31,7 +31,7 @@
         </datalist>          
         
         <label for="quantity" required>Quanity (Maksimum 5): </label>
-        <input type="number" id="quantity" name="quantity" min="1" max="5">
+        <input type="number" id="quantity" name="quantity" min="1" max="5" required title="Podaj ilość">
     </fieldset>
     <br>
 <input type="submit" value="Submit">
