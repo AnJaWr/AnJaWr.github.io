@@ -15,7 +15,7 @@
     <fieldset id="Customer">
         <legend>Customer info:</legend>
         <label for="name">Name: </label><input type="text" name="name" id="name" placeholder="Eneter your name" size="50" autofocus required><br>
-        <label for="phone">Telehone: </label> <input type="tel" name="phone" id="phone" size="50" pattern="[0-9]\-[0-9]{3}\-[0-9]{3}\-[0-9]{4}" placeholder="Pattern: 1-234-567-8910" title="Wpisz zgodnie ze wzorem: 1-234-567-8910" reqired><br>
+        <label for="phone">Telehone: </label> <input type="tel" name="phone" id="phone" size="50" pattern="[0-9]-[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Pattern: 1-234-567-8910" title="Wpisz zgodnie ze wzorem: 1-234-567-8910" required><br>
         <label for="email">Email address: </label> <input type="email" name="email" id="email" size="50" placeholder="Enter your email address" multiple required>
                 
     </fieldset>
@@ -31,7 +31,7 @@
         </datalist>          
         
         <label for="quantity" required>Quanity (Maksimum 5): </label>
-        <input type="number" id="quantity" name="quantity" min="1" max="5" required title="Podaj ilość">
+        <input type="number" id="quantity" name="quantity" min="1" max="5"  title="Podaj ilość">
     </fieldset>
     <br>
 <input type="submit" value="Submit">
