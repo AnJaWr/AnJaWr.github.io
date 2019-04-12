@@ -9,7 +9,8 @@ label{
     display: block;
 }
 
-label[for="gender"],
+label[for="male"],
+label[for="female"],
 label[for="agree"] {
     display: inline-block;
     padding: 1%;
