@@ -1,0 +1,121 @@
+body {
+    background-color: white;
+    font-family: lato; 
+    }
+    
+    .outer {
+    position: relative;
+    
+    width:700px;
+    height: 1000px;
+    }
+    
+    h1{
+        text-align: center;
+        padding: 80px;
+        position: relative;
+    }
+    .inner_one {
+    position: absolute;
+    width: 700px;
+    margin-top: 1%;
+    height: 460px;
+    }
+    
+    .inner_two {
+    height: 180px; 
+    width: 700px;
+    position: absolute;
+    top: 460px;
+    }
+    
+    .top {
+        position: relative;
+        width: 700px;
+        height: 200px;
+    }
+    
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      width: 700px;
+      height: 160px;
+    }
+    
+    .jasnofioletowy {
+        background-color: #b18eec;
+    }
+    
+    .jasnoniebieski {
+        background-color: #659ee3;
+    }
+    
+    .ciemnoniebieski
+     {
+        background-color: #2a6fc2;
+    }
+    
+    .ciemnofioletowy{
+        background-color: #7a66e6;
+    }
+    
+     .bezowy{
+        background-color: #edcf96;
+    }
+    
+    #k1 {
+    width: 56%;
+    height: 320px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    }
+    
+    #k2 {
+    width: 56%;
+    height: 130px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    }
+    
+    #k3 {
+    height: 130px;
+    width: 43%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    }
+    
+    #k4 {
+    height: 320px;
+    width: 43%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    }
+    
+    #k5 {
+    width: 41%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    }
+    
+    #k6 {
+    width: 59%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    }
+
+/*  
+- niebieskie: , 
+- fioletowe: , 
+
+Szerokość kafelków:
+- niebieskie: 44%
+- fioletowe: 54%
+
+Czcionka: 
+- "Lato"*/
