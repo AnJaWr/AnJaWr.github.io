@@ -1,0 +1,163 @@
+@font-face {
+    font-family:"lato";
+    src:url("https://use.typekit.net/af/180254/00000000000000000001522c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/180254/00000000000000000001522c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/180254/00000000000000000001522c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-style:normal;font-weight:400;
+    }
+
+ body {
+font-family: lato; 
+box-sizing: border-box;
+}
+
+header {
+height: 350px;
+width: 100%; 
+background-color: #c9c9c9;
+position: relative;
+display: inline-block;
+}
+
+h1 {
+font-size: 70px;
+color: #2a6fc2;
+text-align: center;
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+nav {
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+  
+ li {
+    float: right;
+}
+  
+li a {
+    display: block;
+    height: 70px;
+    margin-right: 50px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #blue;
+}
+
+
+.aboutme{
+font-size: 35px;
+background-color: #edce95;
+position: relative;
+padding: 50px;
+}
+
+#square_aboutme{
+box-sizing: border-box;
+position: relative;
+top: 10%;
+width: 40%;
+background-color: white;
+margin-left:auto;
+margin-right:auto;
+padding: 55px;
+}
+
+.circle_grey {
+width: 50px;
+height: 50px;
+background-color: #808080;
+border: none;
+border-radius: 50%;
+}
+
+
+.porftolio_kontener {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    }
+
+.circle_portfolio_grey{
+position: relative;
+margin-right: 40px;
+width: 200px;
+height: 200px;
+background-color: #808080;
+border-radius: 50%;
+}
+
+.circle_portfolio_blue {
+width: 30px;
+height: 30px;
+background-color: #2a6fc2;
+border-radius: 50%;
+position: absolute;
+top: -20px;
+left: 50%;
+right: 50%;
+}
+
+footer {
+font-size: 30px;
+background-color: #edce95;
+}
+
+
+#footer_rec{
+width: 40%;
+background-color: #2a6fc2;
+color: white
+
+}
+
+.trojkat {
+width: 0;
+height: 0;
+position: absolute;
+border-top: 350px solid #2a6fc2;
+border-right: 400px solid transparent;
+left: 0px;
+top: 0px;
+}
+
+#c1 {
+position: absolute;
+top: -10px;
+right: -10px;
+}
+
+#c2 {
+position: absolute;
+top: -10px;
+left: -10px;
+    }
+
+
+#c3 {
+position: absolute;
+bottom: -10px;
+left: -10px;
+}
+
+
+#c4 {
+position: absolute;
+bottom: -10px;
+right: -10px;
+}
+
+
