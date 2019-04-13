@@ -14,4 +14,4 @@ float: left;
 border: 10px solid orange;
 }
 
-/* mimo że jest 50%, nie zmieści się w ppłowie, bo jest padding. Zalatwi to border-box */
+/* mimo że jest 50%, nie zmieści się w połowie, bo jest padding. Zalatwi to border-box */
