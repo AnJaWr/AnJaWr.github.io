@@ -15,7 +15,6 @@ width: 100%;
 background-color: #c9c9c9;
 position: relative;
 display: inline-block;
-padding-left: 50px;
 }
 
 h1 {
@@ -38,7 +37,6 @@ nav {
     top: 0;
     padding: 5px;
     z-index: 1;
-
 }
 
 ul {
@@ -127,16 +125,6 @@ padding: 50px;
 }
 
 
-.trojkat {
-width: 0;
-height: 0;
-position: absolute;
-border-top: 350px solid #2a6fc2;
-border-right: 400px solid transparent;
-left: 0%;
-top: 0%;
-}
-
 #c1 {
 position: absolute;
 top: -10px;
@@ -193,4 +181,13 @@ a.mobile {
     position: absolute;
     bottom: 50px;
     right: -25px;
+    }
+
+.trojkacik {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 30%;
+        height: 100%;;
+
     }
