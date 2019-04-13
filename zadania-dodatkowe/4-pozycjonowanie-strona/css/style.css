@@ -4,7 +4,7 @@
     font-style:normal;font-weight:400;
     }
 
- body {
+body {
 font-family: lato; 
 box-sizing: border-box;
 }
@@ -89,13 +89,12 @@ border: none;
 border-radius: 50%;
 }
 
-
 .porftolio_kontener {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-    }
+position: relative;
+display: flex;
+justify-content: center;
+padding: 50px;
+}
 
 .circle_portfolio_grey{
 position: relative;
