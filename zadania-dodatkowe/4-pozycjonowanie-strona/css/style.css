@@ -34,6 +34,11 @@ nav {
     color: black;
     font-size: 30px;
     font-weight: bold;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    z-index: 1;
+
 }
 
 ul {
