@@ -1,0 +1,32 @@
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+
+#colors {
+    background-color: yellow;
+    transition: background-color 3s linear; 
+}
+
+#colors:hover {
+    background-color: brown;
+}
+#box1 {
+    background-color: pink;
+    transition: width 1s linear 0s;
+}
+
+
+#box2 {
+    background-color: green;
+}
+
+#box3 {
+    background-color: red;
+}
+
+#box1:hover {
+width: 300px;
+
+}
