@@ -1,0 +1,54 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header  {
+    background-color: white;
+    background-image: url("../img/header.jpg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #007bff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-size: 20px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+hr {
+    border: 1px solid #007bff;
+    width: 30%;
+}
+
+span {
+    content: "\2022";
+    color: #007bff;
+}
+
+button {
+    border: 1px solid #007bff;
+    outline: none;
+    background-color: #f2f1ed;
+    margin: 10px;
+    padding: 20px;
+    color: #007bff;
+}
+
+button:hover {
+    color: #f2f1ed;
+
+    background-color: #007bff ; 
+}
