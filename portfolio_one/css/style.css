@@ -1,9 +1,10 @@
 body {
     font-family: 'Open Sans', sans-serif;
+    color: #333;
 }
 
 header  {
-    background-color: white;
+    background-color: #f2f1ed;
     background-image: url("../img/header.jpg");
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -24,15 +25,27 @@ h1 {
 
 h2 {
     font-size: 20px;
-    color: black;
+    color: #333;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
+
+header h2 {
+  margin-top: 5vh;
+  margin-top: 5vh;}
+
 hr {
     border: 1px solid #007bff;
-    width: 30%;
+    width: 20vh;
 }
 
+nav {
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+}
 span {
     content: "\2022";
     color: #007bff;
@@ -44,7 +57,7 @@ button {
     background-color: #f2f1ed;
     margin: 10px;
     padding: 20px;
-    color: black;
+    color: #333;
 }
 
 button:hover {
@@ -58,20 +71,19 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin: 0%;
+    padding: 0%;
 }
-  
- li {
-    float: right;
-}
+    
   
 li a {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 70px;
     margin-right: 50px;
-    color: black;
-    text-align: center;
     text-decoration: none;
+    color: white;
 }
   
 li a:hover {
@@ -81,3 +93,91 @@ li a:hover {
 li a:active {
     color: darkblue;
 }
+
+/* sekcja o mnie */
+
+#about {
+    margin-top: 20vh;
+}
+#about_me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#my_photo {
+    height: 40vh;
+    width: 40vh;
+    border-radius: 50%;
+    background-image: url('../img/about.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    margin-top: 10vh;
+} 
+
+#text_about {
+    width: 50%;
+    text-align: center;
+}
+
+section#about_me button {
+    border: 1px solid #007bff;
+    outline: none;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    color: #333;
+}
+
+button:hover {
+    color: #f2f1ed;
+    background-color: #007bff; 
+}
+
+/* Portfolio */
+
+
+#portfolio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f1ed;
+}
+
+#portfolio h2, #contact h2 {
+    margin-top: 20vh;
+}
+
+#portfolio hr, #contact h2 {
+    margin-bottom: 10vh;
+}
+
+#gallery {
+    width: 80%;
+    margin: 0;
+    font-size: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+figure {
+    flex-basis: 25%;
+    margin: 0px;
+    padding: 0px;
+}
+
+figure img {
+	max-width: 100%; 
+    margin: 0px;
+    padding:0px;
+}
+
+section#portfolio {
+    padding-bottom: 10vh;
+}
+
+/* KONTAKT */
+

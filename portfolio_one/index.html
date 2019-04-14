@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,27 +11,108 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Portfolio</title>
 </head>
+
 <body>
-<header>
-    <div id="header">
-        <h1>Front End Developer</h1>
-        <hr>
-        <h2>HTML <span>&#8226;</span> CSS <span>&#8226;</span> JAVASCRIPT</h2>
-    </div>
-    <a href=""><button>Dowiedz się więcej</button></a>
-</header>
-<nav>
-    <ul>
-        <li><a link href="#aboutme">O MNIE</a></li>
-        <li><a link href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#kontakt">KONTAKT</a></li>
-    </ul>
-</nav>
-<section id="about_me">
+    <header>
+        <div id="header">
+            <h1>Front End Developer</h1>
+            <hr>
+            <h2>HTML <span>&#8226;</span> CSS <span>&#8226;</span> JAVASCRIPT</h2>
+        </div>
+        <a href=""><button>Dowiedz się więcej</button></a>
+    </header>
+    <nav>
+        <ul>
+            <li><a link href="#about_me">O MNIE</a></li>
+            <li><a link href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contact">KONTAKT</a></li>
+        </ul>
+    </nav>
+    <!--        O mnie      -->
+
+    <section id="about_me">
+        <div id="naglowek">
+            <h2>O MNIE</h2>
+            <hr>
+            <div id="my_photo"></div>
+        </div>
+        <div id="text_about">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem corporis fuga impedit maiores
+                mollitia sunt iusto molestiae ducimus minus perferendis, minima, sapiente explicabo vero harum accusamus
+                debitis, fugiat at labore.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate doloribus porro amet culpa nulla,
+                velit ipsa sequi repellat tempore, esse quaerat delectus, nisi ipsum. Laudantium eum ex a hic ullam.</p>
+        </div>
+        </div>
+        <a href="#portfolio"><button>MOJE PORTFOLIO</button></a>
+    </section>
+
+    <!-- Sekcja portfolio -->
+
+
+    <section id="portfolio">
+        <div id="portfoliotxt">
+            <h2>Portfolio</h2>
+            <hr>
+        </div>
+        <div id="gallery">
+            <figure>
+                <img src="img/portfolio/photo-1.jpg" alt="image 1">
+            </figure>
+            <figure>
+                <img src="img/portfolio/photo-2.jpg" alt="image 2">
+            </figure>
+            <figure>
+                <img src="img/portfolio/photo-3.jpg" alt="image 3">
+            </figure>
+            <figure>
+                <img src="img/portfolio/photo-4.jpg" alt="image 4">
+            </figure>
+            <figure>
+                <img src="img/portfolio/photo-5.jpg" alt="image 5">
+            </figure>
+            <figure>
+                <img src="img/portfolio/photo-6.jpg" alt="image 6">
+            </figure>
+            <figure>
+                <img src="img/portfolio/photo-7.jpg" alt="image 7">
+            </figure>
+            <figure>
+                <img src="img/portfolio/photo-8.jpg" alt="image 8">
+            </figure>
+            <figure>
+                <img src="img/portfolio/photo-9.jpg" alt="image 9">
+            </figure>
+            <figure>
+                <img src="img/portfolio/photo-10.jpg" alt="image 10">
+            </figure>
+            <figure>
+                <img src="img/portfolio/photo-11.jpg" alt="image 11">
+            </figure>
+            <figure>
+                <img src="img/portfolio/photo-12.jpg" alt="image 12">
+            </figure>
+        </div>
+    </section>
+        
+ 
+<!-- KONTAKT -->
+<section id="contact">
+        <div id="contact">
+                <h2>KONTAKT</h2>
+                <hr>
+            </div>
 </section>
-<section id="portfolio">
-</section>
-<section id="contact"></section>
+<form  id="form_contact" action="" method="POST">
+<input type="text" name="name" placeholder="Imię">
+<input type="text" name="surname" placeholder="Nazwisko"><br>
+<textarea name="message"placeholder="Wiadomość"></textarea>
+</form>
+
+<!-- FOOTER -->
 <footer></footer>
+
+
 </body>
 </html>
