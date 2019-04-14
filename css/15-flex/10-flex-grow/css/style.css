@@ -12,9 +12,9 @@ Domyślne kolory 'flex-item' - START
     margin: 3px;
     background-color: orange;
     flex-basis: 15%;
-/*    flex-grow: 1;*/
+   flex-grow: 0;
 }
-
+/* Przeglądarka mierzy przestrzen, dzieli sobie na ilosc czesci, wolna przestrzen dzieli jiedzy elementy z grow */
 .flex-item:nth-last-of-type(odd) {
     background-color: lightgray;
 }
@@ -34,7 +34,7 @@ Domyślne kolory 'flex-item' - END
 }
 
 .ordered-item {
-/*    flex-grow: 3;*/
+   flex-grow: 3;
 }
 
 

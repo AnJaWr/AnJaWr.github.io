@@ -35,7 +35,7 @@ Domyślne kolory 'flex-item' - END
 }
 
 .ordered-item {
-/*	align-self: flex-end;*/
+align-self: flex-end;
 }
 
 

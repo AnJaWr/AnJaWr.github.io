@@ -12,7 +12,7 @@ Domyślne kolory 'flex-item' - START
     margin: 3px;
     background-color: orange;
     flex-basis: 40%;
-/*    flex-shrink: 2;*/
+   flex-shrink: 2;
 }
 
 .flex-item:nth-last-of-type(odd) {
@@ -39,10 +39,10 @@ Czyli itemy są szersze o 20% niż kontener.
 Ustaw flex-shrink, aby zobaczyć jak item się zmniejsza :)
 */
 .ordered-item {
-/*    flex-shrink: 4;*/
+   flex-shrink: 4;
 }
 
 
 
 
-
+/* jesli divy sie nie mieszcza w kontenerze, flex shrink odejmuje miejsce wskazanemu elementowi */
