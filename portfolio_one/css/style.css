@@ -44,11 +44,40 @@ button {
     background-color: #f2f1ed;
     margin: 10px;
     padding: 20px;
-    color: #007bff;
+    color: black;
 }
 
 button:hover {
     color: #f2f1ed;
+    background-color: #007bff; 
+}
 
-    background-color: #007bff ; 
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+  
+ li {
+    float: right;
+}
+  
+li a {
+    display: block;
+    height: 70px;
+    margin-right: 50px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+  
+li a:hover {
+    color: blue;
+}
+
+li a:active {
+    color: darkblue;
 }
