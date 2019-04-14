@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -99,20 +100,33 @@
  
 <!-- KONTAKT -->
 <section id="contact">
-        <div id="contact">
-                <h2>KONTAKT</h2>
-                <hr>
-            </div>
+    <div id="contact">
+        <h2>KONTAKT</h2>
+        <hr>
+    </div>
+
+    <div id="formularz">
+    <form  id="form_contact" action="" method="POST">
+        <input type="text" name="name" placeholder="Imię" >
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="message"placeholder="Wiadomość"></textarea>
+       <button type="submit">WYŚLIJ WIADOMOŚĆ</button>
+    </form>
+    </div>
+    <div id="socialmedia">
+        <ul>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
 </section>
-<div id="formularz">
-<form  id="form_contact" action="" method="POST">
-<input type="text" name="name" placeholder="Imię" >
-<input type="text" name="surname" placeholder="Nazwisko"><br>
-<textarea name="message"placeholder="Wiadomość" rows="10" cols="100"></textarea>
-</form>
-</div>
+
+
 <!-- FOOTER -->
-<footer></footer>
+<footer>
+   <div id="footer"> <p>
+Copryhing <i class="fa fa-copyright"></i> Akademia 108 - Szkoła Programowania
+</p></div></footer>
 
 
 </body>
