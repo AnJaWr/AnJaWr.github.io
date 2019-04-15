@@ -1,0 +1,29 @@
+#naglowek {
+    background-image: url("../img/man-1.jpg");
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    height: 100vh;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+h1, h2 {
+ margin-left: 2%;
+}
+
+
+@media (min-width:992 ) and (max-width:1169) {
+
+}
+
+@media (max-width:991 ) {
+
+}
