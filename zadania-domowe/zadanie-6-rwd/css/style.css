@@ -1,4 +1,4 @@
-#naglowek {
+header {
     background-image: url("../img/man-1.jpg");
     background-position: top left;
     background-size: cover;
@@ -13,14 +13,38 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
-}
+    }
 
-h1, h2 {
- margin-left: 2%;
-}
+    #naglowek {
+    margin-left: 2%;
+    }
 
+@media (min-width:992px) and (max-width:1170px) {
+    header {
+        background-image: url("../img/man-2.jpg");
+        background-position: top left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-transform: uppercase;
+        height: 70vh;
+        width: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        align-content: flex-end;
+        flex-direction: column;
+    }
 
-@media (min-width:992 ) and (max-width:1169) {
+    h2 {
+        margin-top: 30vh;
+    }
+
+    #naglowek {
+        margin-right: 2%;
+        }
 
 }
 
