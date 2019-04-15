@@ -1,7 +1,6 @@
 header {
     background-image: url("../img/man-1.jpg");
-    background-position: top left;
-    background-size: cover;
+    backgr ound-size: cover;
     background-repeat: no-repeat;
     text-transform: uppercase;
     height: 100vh;
@@ -15,7 +14,7 @@ header {
     flex-direction: column;
     }
 
-    #naglowek {
+    #naglowek_txt{
     margin-left: 2%;
     }
 
@@ -25,29 +24,46 @@ header {
         background-position: top left;
         background-size: cover;
         background-repeat: no-repeat;
-        text-transform: uppercase;
         height: 70vh;
         width: 100%;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: white;
-        font-weight: bold;
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
         align-content: flex-end;
         flex-direction: column;
     }
-
-    h2 {
-        margin-top: 30vh;
+#naglowek_txt {
+        margin-left: 0;
+        margin-right: 2vw;
+        margin-top: 20vh;
     }
 
-    #naglowek {
-        margin-right: 2%;
-        }
+  
 
 }
 
 @media (max-width:991 ) {
+    header {
+        background-image: url("../img/man-2.jpg");
+        background-position: top left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-transform: uppercase;
+        height: 100vh;
+        width: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        }
+    
+        #naglowek {
+        margin-left: 2%;
+        }
+
 
 }
