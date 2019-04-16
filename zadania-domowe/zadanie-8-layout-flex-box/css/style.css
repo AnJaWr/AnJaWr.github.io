@@ -66,3 +66,42 @@ footer {
     order: 1;
  }
 }
+
+@media (min-width:786px) and (max-width:991px) {
+    div#maincontainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+      
+    }
+    section {
+        width: 70%;
+        order: 0;
+    }
+    aside#left {
+        width: 100%;
+        order: 2;
+    }
+ aside#right {
+    width: 30%;
+    order: 1;
+ }
+}
+
+@media (min-width:992px) {
+    div#maincontainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section {
+        width: 50%;
+        order: 2;
+    }
+    aside#left {
+        width: 25%;
+        order: 1;
+    }
+ aside#right {
+    width: 25%;
+    order: 3;
+ }
+}
