@@ -90,7 +90,11 @@ div#tekst {
     animation: 3s linear fadeIn2;
     animation-delay: 12s;
     animation-fill-mode: forwards;
+    
 }
+
+
+
 
 @keyframes fadeIn {
     0% {
