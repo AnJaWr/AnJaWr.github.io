@@ -7,6 +7,7 @@
     color: white;
     font-size: 3vh;
 }
+
 div#maincontainer {
     display: flex;
     justify-content: center;
@@ -23,11 +24,11 @@ header {
     background-color: orangered;
 }
 
-
 section {
     background-color: darkturquoise;
     height: 30vh;
     width: 100%;
+    justify-content: center;
 }
 
 aside#left {
@@ -46,6 +47,22 @@ footer {
     background-color: mediumslateblue;
 }
 
-
-
-@media (max-width:786) {}
+@media (min-width:786px) and (max-width:991px) {
+    div#maincontainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+      
+    }
+    section {
+        width: 70%;
+        order: 0;
+    }
+    aside#left {
+        width: 100%;
+        order: 2;
+    }
+ aside#right {
+    width: 30%;
+    order: 1;
+ }
+}
