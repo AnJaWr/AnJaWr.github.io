@@ -253,7 +253,7 @@ div#socialmedia ul li a {
 .fa {
     padding: 5vh;
     font-size: 6vh;
-    width: 10vh;
+    /* width: 10vh; */
     text-align: center;
     text-decoration: none;
 }
@@ -314,7 +314,6 @@ div#footer {
     }
     input[type="text"],
     input[type="email"] {
-        width: 48%;
         padding: 3%;
     }
 }
@@ -322,42 +321,54 @@ div#footer {
 
 /* ...............ekrany 480-767 px*....................*/
 
-
-}
 @media (min-width:480px) and (max-width:767px) {
-    figure {
-        max-width: 50%;
+    li a {
+        margin: 1vw;
+        padding: 1vw;
     }
-    /* ...............ekrany do 480px*....................*/
+    figure img {
+        max-width: 100%;
+    }
+    #gallery {
+        width: 96%;
+    }
+    div#formularz {
+        width: 100%;
+    }
+    form {
+        margin: 1%;
+    }
+    input[type="text"],
+    input[type="email"] {
+        width: 48%;
+    }
 }
+
+
+/* ...............ekrany do 480px*....................*/
+
 @media (max-width: 480px) {
     li a {
         margin: 1vw;
         padding: 1vw;
     }
-    
     figure img {
         max-width: 100%;
     }
-    
     div#formularz {
         width: 100%;
     }
-    
     form {
         margin: 1%;
     }
-    
     input[type="text"],
     input[type="email"] {
         width: 100%;
     }
-    
     div#socialmedia ul li a {
         margin: 0;
         margin-bottom: 3Vh;
     }
-    
     div#footer {
         font-size: 3vw;
     }
