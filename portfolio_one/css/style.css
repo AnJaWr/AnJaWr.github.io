@@ -352,6 +352,9 @@ div#footer {
         margin: 1vw;
         padding: 1vw;
     }
+    #gallery {
+        width: 98%;
+    }
     figure img {
         max-width: 100%;
     }
