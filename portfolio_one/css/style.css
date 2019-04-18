@@ -329,7 +329,7 @@ div#footer {
     figure img {
         max-width: 100%;
     }
-    #gallery {
+    div#gallery {
         width: 96%;
     }
     div#formularz {
@@ -352,7 +352,7 @@ div#footer {
         margin: 1vw;
         padding: 1vw;
     }
-    #gallery {
+    div#gallery {
         width: 98%;
     }
     figure img {
