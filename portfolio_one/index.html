@@ -102,10 +102,11 @@
         </div>
 
         <div id="formularz">
-            <form id="form_contact" action="" method="POST">
-                <input type="text" name="name" placeholder="Imię">
-                <input type="email" name="email" placeholder="Email">
-                <textarea name="message" placeholder="Wiadomość"></textarea>
+
+            <form id="form_contact" action="https://formspree.io/annawrobel.ogrodowa@gmail.com" method="POST" autocomplete="on">
+                <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Wiadomość" required></textarea>
                 <button type="submit">WYŚLIJ WIADOMOŚĆ</button>
             </form>
         </div>
