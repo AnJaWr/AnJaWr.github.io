@@ -27,12 +27,6 @@ function zaznaczWszystkie() {
 const formularz = document.querySelector('form');
 
 
-
-//  var textInputs = document.querySelectorAll('input[type=text]');
-//     console.log(textInputs);
-//     var firstAgreement = document.getElementById('zgoda-marketingowa-1');
-
-
 const walidacja = (event) => {
 
     const polaTekstowe = document.querySelectorAll('input[type=text]');
@@ -46,58 +40,19 @@ const walidacja = (event) => {
         } else {
             error1.remove();
         }
+
     }
+
+    if (zgoda1.checked == false) {
+        event.preventDefault();
+        let error2 = document.createElement("p");
+        error2.innerHTML = "Zaznacz zgodę";
+        zgoda1.parentNode.replaceChild(error2, zgoda1.nextSibling);
+    } else {
+        error2.remove();
+    }
+
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// event.preventDefault();
-
-
-
-
-
 formularz.addEventListener('submit', walidacja);
-
-
-
-
-
-
-
-
-
-// const wyslij = document.getElementById("wyslij");
-// console.log(wyslij);*/
-
-//       const polaTekstowe = document.querySelectorAll('input[type=text]');
-
-// for (let i = 0; i < polaTekstowe.length; i++) {
-//     if (polaTekstowe[i].value == "") {
-//         event.preventDefault();
-//         let error1 = document.createElement("p");
-//         error1.innerHTML = "Uzupełnij dane";
-//         polaTekstowe[i].parentNode.replaceChild(error1, polaTekstowe[i].nextSibling);
-//     } else {
-//         return true;
-//     }
-// }
