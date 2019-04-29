@@ -19,3 +19,11 @@ span {
     background-color: yellow !important;
     color: blue !important;
 }
+
+#parSecond {
+    border: 1px dotted red;
+}
+
+#paragrafWparSeond {
+    background-color: coral;
+}
