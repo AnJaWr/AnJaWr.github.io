@@ -55,4 +55,4 @@ const walidacja = (event) => {
 }
 
 
-formularz.addEventListener('submit', walidacja);
+formularz.addEventListener('submit', walidacja)
