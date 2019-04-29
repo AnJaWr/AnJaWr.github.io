@@ -43,9 +43,13 @@ const walidacja = (event) => {
             let error1 = document.createElement("p");
             error1.innerHTML = "Uzupełnij dane";
             polaTekstowe[i].parentNode.replaceChild(error1, polaTekstowe[i].nextSibling);
+        } else {
+            error1.remove();
         }
     }
 }
+
+
 
 
 
