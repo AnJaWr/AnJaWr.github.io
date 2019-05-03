@@ -181,7 +181,7 @@ section#portfolio {
 
 div.photo {
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     background-position: top left;
     width: 25%;
     height: 25vh;
