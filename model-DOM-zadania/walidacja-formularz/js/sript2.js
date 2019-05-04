@@ -8,12 +8,12 @@ const zgoda2 = document.getElementById('zgoda-marketingowa-2');
 
 const zgody = document.getElementById('wszystkie-zgody');
 
+const wyslij = document.getElementById('wyslij');
+
 /* Zaznaczanie wszystkich zgód na raz */
 zgody.addEventListener("change", zaznaczWszystkie);
 
 function zaznaczWszystkie() {
-
-
     if (zgody.checked) {
         zgoda1.checked = true;
         zgoda2.checked = true;
@@ -29,18 +29,12 @@ function zaznaczWszystkie() {
 /* WALIDACJA */
 
 
-
-formularz.addEventListener('submit', walidacja);
-
-function walidacja(e) {
-    e.preventDefault();
+const wprowadzText = (e) => {
     for (let i = 0; i < polaTekstowe.length; i++) {
         // dla każdego inputu typu text sprawdź warunek:
-        if (polaTekstowe[i].value == "") {
+        if (polaTekstowe[i].value === "") {
             // jeżeli string jest pusty
 
-            // nie wysyłaj
-            e.preventDefault();
             //  tworzymy wyskakujacy jako paragraf błąd:
             let error1 = document.createElement("p");
             let pErrorClass = document.createAttribute("class");
@@ -51,19 +45,54 @@ function walidacja(e) {
             error1.innerHTML = "Uzupełnij dane";
             //każemy mu się wstawić pod polem:
             formularz.insertBefore(error1, polaTekstowe[i]);
+            // nie wysyłaj
+            e.preventDefault();
         } else {
             console.log("Warunek spełniony");
-            document.body.formularz.removeChild(p.error1);
+            let err1 = document.getElementsByClassName("error")
+
+            err1.parentNode.removeChild(err1);
+
         }
     }
+};
+
+const checkBoxing = (e) => {
     if (zgoda1.checked == false) {
-        event.preventDefault();
         let error2 = document.createElement("p");
         error2.innerHTML = "Zaznacz zgodę";
+        let pError2id = document.createAttribute("id");
+        pError2id.value = "error2";
+        error2.setAttributeNode(pError2id);
         formularz.insertBefore(error2, zgoda2);
+        e.preventDefault();
     } else {
         console.log("Warunek spełniony");
-        formularz.removeChild(p);
+        let err2 = document.getElementById("error2")
+        err2.parentNode.removeChild(err2);
     }
-
 };
+
+
+const walidacja = (e) => {
+    wprowadzText(e);
+    checkBoxing(e);
+};
+
+
+/* sprawdzanie checkboxów */
+
+
+
+
+
+formularz.addEventListener('submit', walidacja);
+
+
+
+
+// let userExist = false;
+
+// for (let i = 0; i < tab.length; i++) {
+//     if (tab[i] === "Beata") {
+//         userExist = true;
