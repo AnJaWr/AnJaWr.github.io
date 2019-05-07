@@ -1,7 +1,9 @@
 'use strict';
-/* Przypisanie*/
+
 const formularz = document.querySelector('form');
+
 const polaTekstowe = document.querySelectorAll('input[type=text]');
+
 const zgoda1 = document.getElementById('zgoda-marketingowa-1');
 
 const zgoda2 = document.getElementById('zgoda-marketingowa-2');
@@ -9,6 +11,30 @@ const zgoda2 = document.getElementById('zgoda-marketingowa-2');
 const zgody = document.getElementById('wszystkie-zgody');
 
 const wyslij = document.getElementById('wyslij');
+
+
+
+for (let i = 0; i < polaTekstowe.length; i++) {
+    let error1 = document.createElement("p");
+    let errorClass = document.createAttribute("class");
+    errorClass.value = "error";
+    error1.setAttributeNode(errorClass);
+    error1.innerHTML = "";
+    formularz.insertBefore(error1, polaTekstowe[i].nextSibling);
+}
+
+
+let error2 = document.createElement("p");
+let error2Id = document.createAttribute("id");
+error2.setAttributeNode(error2Id);
+error2Id.value = "error2";
+error2.innerHTML = "";
+formularz.insertBefore(error2, zgoda2);
+
+
+const pError = document.getElementsByClassName('error');
+console.log(pError);
+
 
 /* Zaznaczanie wszystkich zgód na raz */
 zgody.addEventListener("change", zaznaczWszystkie);
@@ -27,49 +53,33 @@ function zaznaczWszystkie() {
     }
 };
 /* WALIDACJA */
-
-
 const wprowadzText = (e) => {
     for (let i = 0; i < polaTekstowe.length; i++) {
         // dla każdego inputu typu text sprawdź warunek:
         if (polaTekstowe[i].value === "") {
-            // jeżeli string jest pusty
-
-            //  tworzymy wyskakujacy jako paragraf błąd:
-            let error1 = document.createElement("p");
-            let pErrorClass = document.createAttribute("class");
-            pErrorClass.value = "error";
-            error1.setAttributeNode(pErrorClass);
-
-            // ustawiamy tekst, wpisany w ten paragraf
-            error1.innerHTML = "Uzupełnij dane";
-            //każemy mu się wstawić pod polem:
-            formularz.insertBefore(error1, polaTekstowe[i]);
-            // nie wysyłaj
             e.preventDefault();
-        } else {
-            console.log("Warunek spełniony");
-            let err1 = document.getElementsByClassName("error")
-
-            err1.parentNode.removeChild(err1);
-
+            // jeżeli string jest pusty
+            // ustawiamy tekst, wpisany w ten paragraf
+            // for (let j = 0; j < pError.length; j++) {
+            polaTekstowe[i].nextSibling.innerHTML = "Uzupełnij dane";
+        }
+        // nie wysyłaj
+        else {
+            polaTekstowe[i].nextSibling.innerHTML = "";
         }
     }
+    console.log("Warunek spełniony");
 };
+
+
 
 const checkBoxing = (e) => {
     if (zgoda1.checked == false) {
-        let error2 = document.createElement("p");
-        error2.innerHTML = "Zaznacz zgodę";
-        let pError2id = document.createAttribute("id");
-        pError2id.value = "error2";
-        error2.setAttributeNode(pError2id);
-        formularz.insertBefore(error2, zgoda2);
         e.preventDefault();
+        error2.innerHTML = "Zaznacz zgodę";
     } else {
         console.log("Warunek spełniony");
-        let err2 = document.getElementById("error2")
-        err2.parentNode.removeChild(err2);
+        error2.innerHTML = "";
     }
 };
 
@@ -83,16 +93,4 @@ const walidacja = (e) => {
 /* sprawdzanie checkboxów */
 
 
-
-
-
 formularz.addEventListener('submit', walidacja);
-
-
-
-
-// let userExist = false;
-
-// for (let i = 0; i < tab.length; i++) {
-//     if (tab[i] === "Beata") {
-//         userExist = true;
