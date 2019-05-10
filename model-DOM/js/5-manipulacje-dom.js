@@ -34,5 +34,5 @@ zmienKolor.addEventListener('click', () => {
 });
 
 
-zmienKolor.style.olor = "blue";
+zmienKolor.style.color = "blue";
 zmienKolor.style.backgroundColor = "lime";
