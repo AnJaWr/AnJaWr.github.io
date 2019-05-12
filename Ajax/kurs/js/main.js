@@ -21,7 +21,7 @@ console.log(response);
  */
 
 
-//3. AJAX -$.ajax()     wersja odzytywana przez każdą przeglądarkę, każdy system
+//3. AJAX -$.ajax()  jQuery   
 
 /* $. ajax({
     url: "https://jsonplaceholder.typicode.com/users/1",
@@ -31,6 +31,9 @@ console.log(response);
     onerror: function (msg) { console. log(msg);
     } }); */
 
+
+    
+// 4. Ajax - js   wersja odzytywana przez każdą przeglądarkę, każdy system
 
 const ajax = (method, url) => {
         // console.log(method, url); 
@@ -64,5 +67,10 @@ httpReq.onreadystatechange = () => {
     }
 
 
-    ajax('GET', 'http://jsonplaceholder.typicode.com/users')
+    ajax('GET', 'http://jsonplaceholder.typicode.com/users');
+
+//  odświeżanie, wysyłanie danyh o 3 sec
+    setInterval(()=> {
+    ajax('GET', 'http://jsonplaceholder.typicode.com/users');
+    }, 3000);
     
