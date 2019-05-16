@@ -25,3 +25,18 @@ const getData = () => {
 button.one('click', getData)
 });
 
+
+/* inna wersja
+const getData = () => {
+$.each( dane, ( key, value ) => {
+ let div =$('<div id="dane-programisty"></div>'); 
+div.html(`
+ <span>   ${key}  :  ${value}  </span><br>`);
+ $('body').append(div)
+  });
+}
+
+
+button.one('click', getData)
+});
+ */
