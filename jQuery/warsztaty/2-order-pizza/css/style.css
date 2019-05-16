@@ -15,10 +15,14 @@ label {
     padding: 1%;
 }
 
+h2{
+    background: red;
+    padding: 15px;
+}
 
 form {
     width: 45%;
-    background-color:  rgba(107, 10, 70, 0.8);
+    background-color:  rgba(216, 25, 25, 0.5);
     margin: 5px, 15px;
     padding: 2%;
 }
@@ -31,17 +35,21 @@ select {
     padding: 1%;
     border: none;
     border-radius: 25px;
+    color: #000;    
+    background-color: rgb(255, 255, 255);
 } 
 
 
-select:focus,
+.second-clr {
+    color: red;
+}
+
 input:focus {
-    color: #000;
+    color: red;    
     outline: 0;
-    background-color: rgb(255, 153, 204);
-    border: 2px solid rgb(102, 0, 102);
+    border: 2px solid red;
     border-radius: 25px;
-    } 
+}
 
 button {
     display:inline-block;

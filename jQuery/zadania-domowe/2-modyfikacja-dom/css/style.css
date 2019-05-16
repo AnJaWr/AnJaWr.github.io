@@ -1,0 +1,27 @@
+#one {background: blue;
+}
+
+#two {background: purple;
+}
+
+#three {background: red;
+}
+
+#four {background: orangered;
+}
+
+#five {background: yellow;
+}
+
+button {
+    background: -webkit-linear-gradient(red, yellow, green);
+    border: 0; 
+    display: inline-block;
+    margin: 15px;
+    
+}
+
+button:active{
+    color: black;
+    background: white
+}
