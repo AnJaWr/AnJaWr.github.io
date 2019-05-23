@@ -85,7 +85,16 @@ form h2 {
   font-size: var(--fs--xl);
   color: black;
 }
-
+.btn--flat {
+  background: none;
+}
 ._text {
   font-size: var(--fs--l);
+}
+@media all and (max-width: 768px) {
+  .poster {
+    min-height: none;
+    padding-bottom: 60px;
+    padding-top: 90px;
+  }
 }
