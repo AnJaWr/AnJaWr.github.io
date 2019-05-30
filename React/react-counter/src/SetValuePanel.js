@@ -22,15 +22,16 @@ import React, { Component } from "react";
 class SetValuePanel extends Component {
   setNewValue = () => {
     this.props.setCounter(parseInt(this.objInput.value))
-
-  }
+  };
+  
+  
 
   render() {
-    return(
+    return (
       <div className="set-value-panel">
-     <input type="number" ref={input => this.objInput = input} />
-      <button onClick={() => { this.setNewValue()}}>Ustaw</button>
-    </div>
+        <input type="number" ref={input => this.objInput = input} />
+        <button onClick={() => { this.setNewValue() }}>Ustaw licznik</button>
+      </div>
     );
   }
 }

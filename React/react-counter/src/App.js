@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import SetValuePanel from "./SetValuePanel";
+// import SetStepValue from "./SetStepValue";
 
 // jak dodać koponent:
 import Heading from "./Heading";
@@ -16,11 +16,11 @@ class App extends Component {
       // zwraca jeden element -> div!
       <div className="App">
         <Heading headingText="Moja superaplikacja licząca" />
-        <Counter initValue={33} />
-        <Heading headingText="Nowy licznik" />
-        <Counter initValue={133} />
+        <Counter initValue={12} stepValue={5} />
 
-        
+
+
+
       </div>
     );
   }

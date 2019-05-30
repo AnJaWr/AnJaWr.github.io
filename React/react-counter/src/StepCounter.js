@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import ButtonPanel from "./ButtonPanel";
+import ButtonNextStepPanel from "./ButtonNextStepPanel";
 import SetValuePanel from "./SetValuePanel";
 import SetStepPanel from "./SetStepPanel"
 
-class Counter extends Component {
+class StepCounter extends Component {
   // tu ! nazwa klasy
 
   constructor(props) {
@@ -11,9 +11,7 @@ class Counter extends Component {
     // pociagnij własciwości konstruktora z klasy wyżej
 
     this.state = { counterValue: this.props.initValue };
- 
-    
-
+    this.state = { stepValue: this.props.stepValue };
     // this.state- słowo zarezerowwane
     // state to obiekt = {}
     // zmiana stanu to refresh koponentu!
@@ -26,6 +24,7 @@ class Counter extends Component {
   };
 
   changeValue = () => {
+    console.log("wywołanie metody changevalue");
     this.setState(prevValue => {
       return {
         counterValue: prevValue.counterValue + 1
@@ -44,14 +43,6 @@ class Counter extends Component {
     this.setState({ counterValue: newValue });
   };
 
-  setStepValue = newStep => {
-    console.log(newStep);
-    this.setState({ stepValue: newStep });
-  }
-
-
-
-
   valueMinusOne = () => {
     console.log("Odejmij jeden");
     this.setState(prevValue => {
@@ -63,32 +54,21 @@ class Counter extends Component {
 
   nextStep = () => {
     console.log("Zwiększ o X")
-    this.setState((prevValue, stepValue) => {
-      return {
-        counterValue: prevValue.counterValue + this.state.stepValue
-      };
-    });
   }
-
-
   render() {
     console.log(this);
     return (
       <div className="counter">
-       <p> Licznik: {this.state.counterValue}</p>
-        <ButtonPanel
+        Licznik: {this.state.counterValue}
+        <ButtonNextStepPanel
           changeCounterValue={this.changeValue}
           clearCounter={this.clearValue}
-          minusOne={this.valueMinusOne}
           initState={this.initialValue}
           nextStep={this.nextStep}
-          setName={this.setName}
         />
         <SetValuePanel setCounter={this.setValue} />
-
         Krok: {this.state.stepValue}
-
-        <SetStepPanel setStep={this.setStepValue} />
+        <SetStepPanel setStep={this.setStep} />
       </div>
     );
     // classNaame!

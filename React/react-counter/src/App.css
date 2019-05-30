@@ -23,6 +23,16 @@
   color: #61dafb;
 }
 
+button {
+  background: green;
+  border: 0;
+  border-radius: 5%;
+  outline: 0;
+  color: white;
+  padding: 5px;
+  margin: 5px; 
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -30,4 +40,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+input {
+  margin-top: 5px;
+}
+
+div {
+  background: lightgreen
+}
+
+p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: darkgreen
 }

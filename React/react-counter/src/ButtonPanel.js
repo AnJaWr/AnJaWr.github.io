@@ -1,5 +1,8 @@
 import React from "react";
 
+
+// import SetStepPanel from "./SetStepPanel";
+
 // to nie jest element klasowy!
 
 const ButtonPanel = props => {
@@ -11,7 +14,7 @@ const ButtonPanel = props => {
       <button onClick={props.clearCounter}>Zeruj </button>
       <button onClick={props.minusOne}>Odejmij jeden </button>
       <button onClick={props.initState}> Stan pierwotny </button>
-      {/* logowanie tu: ()=> console.log('...'); */}
+      <button onClick={props.nextStep}>Zwiększ o krok </button>
     </div>
   );
 };
