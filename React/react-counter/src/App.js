@@ -16,6 +16,7 @@ class App extends Component {
       // zwraca jeden element -> div!
       <div className="App">
         <Heading headingText="Moja superaplikacja licząca" />
+        {/* tu ustawiliśmy że wartoś tego propsu to ten string */}
         <Counter initValue={12} stepValue={5} />
 
 

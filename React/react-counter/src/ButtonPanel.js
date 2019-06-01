@@ -1,10 +1,6 @@
 import React from "react";
 
 
-// import SetStepPanel from "./SetStepPanel";
-
-// to nie jest element klasowy!
-
 const ButtonPanel = props => {
   console.log(props);
 

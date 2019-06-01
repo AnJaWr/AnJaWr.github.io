@@ -4,22 +4,14 @@ import SetValuePanel from "./SetValuePanel";
 import SetStepPanel from "./SetStepPanel"
 
 class Counter extends Component {
-  // tu ! nazwa klasy
 
   constructor(props) {
     super(props);
-    // pociagnij własciwości konstruktora z klasy wyżej
 
     this.state = { counterValue: this.props.initValue };
- 
-    
-
-    // this.state- słowo zarezerowwane
-    // state to obiekt = {}
-    // zmiana stanu to refresh koponentu!
   }
 
-  // ponizej definkiujemy metode
+  // state sie nie dziedziczy; wartosci moze byc kilka costam: this.props.costam
 
   clearValue = () => {
     this.setState({ counterValue: 0 });
@@ -31,7 +23,6 @@ class Counter extends Component {
         counterValue: prevValue.counterValue + 1
       };
     });
-    // setSatate -przekazemy funkje
   };
 
   initialValue = () => {
@@ -47,10 +38,7 @@ class Counter extends Component {
   setStepValue = newStep => {
     console.log(newStep);
     this.setState({ stepValue: newStep });
-  }
-
-
-
+  };
 
   valueMinusOne = () => {
     console.log("Odejmij jeden");
@@ -58,21 +46,19 @@ class Counter extends Component {
       return {
         counterValue: prevValue.counterValue - 1
       };
-    });
-  };
+    })}
 
   nextStep = () => {
     console.log("Zwiększ o X")
     this.setState((prevValue, stepValue) => {
       return {
-        counterValue: prevValue.counterValue + this.state.stepValue
-      };
-    });
-  }
-
+        counterValue: prevValue.counterValue + this.state.stepValue}
+    })};
+    
+  
+  
 
   render() {
-    console.log(this);
     return (
       <div className="counter">
        <p> Licznik: {this.state.counterValue}</p>
