@@ -5,21 +5,6 @@ import './App.css';
 class SetDicesType extends Component {
 
 
-    handleClick = () => {
-        this.props.setType(parseInt(this.refdicestype.value))
-
-
-
-    }
-
-
-    // (this.setState({
-    //     dicesType: this.refdicestype.value
-
-    // }))
-
-
-
 
 
     render() {
@@ -29,22 +14,36 @@ class SetDicesType extends Component {
                 <form>
 
 
-                    <input type="radio" name="dice" id="k4" value="4" ref={inputk4 => this.refdicestype = inputk4} onChange={this.handleClick} />
+                    <input type="radio" name="dice" id="k4" value="4" ref={inputk4 => this.refk4 = inputk4} onChange={() => {
+                        this.props.setType(parseInt(this.refk4.value))
+                    }} />
                     <label htmlFor="k4"> </label>
 
-                    <input type="radio" name="dice" id="k6" value="6" ref={inputk6 => this.refdicestype = inputk6} onChange={this.handleClick} />
+                    <input type="radio" name="dice" id="k6" value="6" ref={inputk6 => this.refk6 = inputk6} onChange={() => {
+                        this.props.setType(parseInt(this.refk6.value))
+                    }} />
                     <label htmlFor="k6"> </label>
 
-                    <input type="radio" name="dice" id="k8" value="8" ref={inputk8 => this.refdicestype = inputk8} onChange={this.handleClick} />
+                    <input type="radio" name="dice" id="k8" value="8" ref={inputk8 => this.refk8 = inputk8} onChange={() => {
+                        this.props.setType(parseInt(this.refk8.value))
+                    }} />
                     <label htmlFor="k8"> </label>
 
-                    <input type="radio" name="dice" id="k10" value="10" ref={inputk10 => this.refdicestype = inputk10} onChange={this.handleClick} /><label htmlFor="k10"> </label>
+                    <input type="radio" name="dice" id="k10" value="10" ref={inputk10 => this.refk10 = inputk10} onChange={() => {
+                        this.props.setType(parseInt(this.refk10.value))
+                    }} />/><label htmlFor="k10"> </label>
 
-                    <input type="radio" name="dice" id="k12" value="12" ref={inputk12 => this.refdicestype = inputk12} onChange={() => { this.props.setType(parseInt(this.refdicestype.value)) }} /> <label htmlFor="k12"> </label>
+                    <input type="radio" name="dice" id="k12" value="12" ref={inputk12 => this.refk12 = inputk12} onChange={() => {
+                        this.props.setType(parseInt(this.refk12.value))
+                    }} /> <label htmlFor="k12"> </label>
 
-                    <input type="radio" name="dice" id="k20" value="20" ref={inputk20 => this.refdicestype = inputk20} onChange={this.handleClick} /><label htmlFor="k20"> </label>
+                    <input type="radio" name="dice" id="k20" value="20" ref={inputk20 => this.refk20 = inputk20} onChange={() => {
+                        this.props.setType(parseInt(this.refk20.value))
+                    }} /><label htmlFor="k20"> </label>
 
-                    <input type="radio" name="dice" id="k100" value="100" ref={inputk20 => this.refdicestype = inputk20} onChange={this.handleClick} /><label htmlFor="k100"> </label>
+                    <input type="radio" name="dice" id="k100" value="100" ref={inputk100 => this.refk100 = inputk100} onChange={() => {
+                        this.props.setType(parseInt(this.refk100.value))
+                    }} /><label htmlFor="k100"> </label>
                 </form>
             </div>
 

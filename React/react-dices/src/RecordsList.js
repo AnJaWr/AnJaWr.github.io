@@ -1,5 +1,5 @@
 import React from "react";
-
+import Divs from "./Divs"
 
 
 const RecordsList = (props) => {

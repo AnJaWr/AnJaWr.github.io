@@ -30,7 +30,8 @@ class Rolling extends Component {
 
     }
     setDivs = () => {
-        Array(this.state.dicesAmount).fill(<Divs />)
+       Array(this.state.dicesAmount).fill(<Divs />)
+        console.log("Klik obslugiwany");
     }
 
     render() {
@@ -46,7 +47,7 @@ class Rolling extends Component {
                         type={this.state.dicesType}
                         setDivs={this.setDivs} />
                 </div>
-                <div>{Array(this.state.dicesAmount).fill(<Divs />)}</div>
+
                 <footer className="App-footer"> Napisano w ReactJS </footer>
             </div>
         );
