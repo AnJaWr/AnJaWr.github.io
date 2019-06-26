@@ -4,7 +4,7 @@ import SetDicesType from "./SetDicesType"
 import SetAmount from './setAmount';
 import RecordsList from './RecordsList'
 
-import Divs from './Divs'
+
 
 
 class Rolling extends Component {
@@ -41,10 +41,7 @@ class Rolling extends Component {
         this.setState({ dicesType: curDicesType });
 
     }
-    setDivs = () => {
-        Array(this.state.dicesAmount).fill(<Divs />)
-        console.log("Klik obslugiwany");
-    }
+
 
     render() {
         return (
@@ -59,6 +56,7 @@ class Rolling extends Component {
                     <RecordsList
                         amount={this.state.dicesAmount}
                         type={this.state.dicesType}
+                        list={this.state.list}
                     />
                 </div>
 

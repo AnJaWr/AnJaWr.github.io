@@ -79,16 +79,27 @@ background: #282c348f;
 margin: 50px;  
 padding: 20px;
 }
-
-.one-record{
-  display: flex;
+.records{
+    display: flex;
 justify-content: center;
 flex-direction: row;
-width: 100px;
-height: 100px;
-background: #3cb1198f;  
-position: absolute;
+width: 98%;
+height: 100%;
+position: relative;
+font-size: 40px;
+flex-wrap: wrap;
 
+}
+.one-record{
+  display: flex;
+width: 80px;
+height: 80px;
+background: #3cb1198f;  
+position: relative;
+font-size: 40px;
+margin: 3px;
+justify-content: center;
+align-content: center;
 }
 
 
@@ -158,12 +169,6 @@ border-color: rgb(93, 248, 93);
 border-style: solid;
 }
 
-.one-record{
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background: pink;
-}
 
 @media all and (min-width:480px) and (max-width:800px) {
 

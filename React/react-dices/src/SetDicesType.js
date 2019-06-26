@@ -31,19 +31,23 @@ class SetDicesType extends Component {
 
                     <input type="radio" name="dice" id="k10" value="10" ref={inputk10 => this.refk10 = inputk10} onChange={() => {
                         this.props.setType(parseInt(this.refk10.value))
-                    }} />/><label htmlFor="k10"> </label>
+                    }} />
+                    <label htmlFor="k10"> </label>
 
                     <input type="radio" name="dice" id="k12" value="12" ref={inputk12 => this.refk12 = inputk12} onChange={() => {
                         this.props.setType(parseInt(this.refk12.value))
-                    }} /> <label htmlFor="k12"> </label>
+                    }} />
+                    <label htmlFor="k12"> </label>
 
                     <input type="radio" name="dice" id="k20" value="20" ref={inputk20 => this.refk20 = inputk20} onChange={() => {
                         this.props.setType(parseInt(this.refk20.value))
-                    }} /><label htmlFor="k20"> </label>
+                    }} />
+                    <label htmlFor="k20"> </label>
 
                     <input type="radio" name="dice" id="k100" value="100" ref={inputk100 => this.refk100 = inputk100} onChange={() => {
                         this.props.setType(parseInt(this.refk100.value))
-                    }} /><label htmlFor="k100"> </label>
+                    }} />
+                    <label htmlFor="k100"> </label>
                 </form>
             </div>
 

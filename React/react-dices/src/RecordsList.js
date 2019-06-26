@@ -2,6 +2,7 @@ import React from "react";
 import Divs from "./Divs"
 
 
+
 const RecordsList = (props) => {
     if (props.amount > 0
         && props.type > 0
@@ -11,9 +12,9 @@ const RecordsList = (props) => {
             <div className="records">
                 <p>Ilość kości: {props.amount}</p>
                 <p> Typ kości: {props.type}</p>
-                <input type="button" value="Rzucaj!"
-                    // onClick={props.setDivs()} 
-                    />
+                <Divs amount={props.amount}
+                    list={props.list}
+                    type={props.type} />
 
 
             </div>

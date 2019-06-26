@@ -2,16 +2,16 @@ import React from "react";
 
 
 
-const Divs = () => {
+const Divs = (props) => {
     return (
-        <div className="one-record" >
-            Wynik
-            </div>
+        <div className="records">
+            {props.list.map(newDiv =>
+                <div className="one-record">
+                    {Math.floor(Math.random() * (props.type - 1 + 1)) + 1}
+                </div>)}
+        </div>
     )
-
-}
-
-
+};
 
 
 
