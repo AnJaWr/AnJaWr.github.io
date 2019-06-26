@@ -4,6 +4,8 @@ import SetDicesType from "./SetDicesType"
 import SetAmount from './setAmount';
 import RecordsList from './RecordsList'
 
+import Divs from './Divs'
+
 
 class Rolling extends Component {
     constructor(props) {
@@ -27,7 +29,9 @@ class Rolling extends Component {
         this.setState({ dicesType: curDicesType });
 
     }
-
+    setDivs = () => {
+        Array(this.state.dicesAmount).fill(<Divs />)
+    }
 
     render() {
         return (
@@ -39,10 +43,10 @@ class Rolling extends Component {
                 <div className="right">
                     <RecordsList
                         amount={this.state.dicesAmount}
-                        type={this.state.dicesType} />
-
-                    {/* <button onClick={console.log(this.state.dicesAmount, this.state.dicesType)}>Klik test</button> */}
+                        type={this.state.dicesType}
+                        setDivs={this.setDivs} />
                 </div>
+                <div>{Array(this.state.dicesAmount).fill(<Divs />)}</div>
                 <footer className="App-footer"> Napisano w ReactJS </footer>
             </div>
         );
