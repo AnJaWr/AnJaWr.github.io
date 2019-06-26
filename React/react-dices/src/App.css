@@ -113,55 +113,46 @@ display: inline-block;
 /* input select */
 
 input[type=radio] {
-  /* display: none */
+  display: none
 }
 
 
 
-label{
-background:white;
+input[type="radio"]+label{
 height: 100px;
 width: 100px;
 display:inline-block;
 padding: 0 0 0 0px;
 position: relative;
-
 margin:5px;
-/* div#k4 */
+
 }
 label#k4{
 background: url("./static/dice/k4.jpg");
 }
-
 
 label[for="k4"]{
   background: url("./static/dice/k4.jpg");}
 
 label[for="k6"]{
   background: url("./static/dice/k6.jpg");}
-label[for="k8"]
-{
-  background: url("./static/dice/k8.jpg");
-}
 
-label[for="k10"]
-{
+label[for="k8"]{
+  background: url("./static/dice/k8.jpg");}
 
-  background: url("./static/dice/k10.jpg");
-}
+label[for="k10"]{
+background: url("./static/dice/k10.jpg");}
 
-label[for="k12"]
-{
-  background: url("./static/dice/k12.jpg");
-}
-label[for="k20"]
-{
+label[for="k12"]{
+background: url("./static/dice/k12.jpg");}
+
+label[for="k20"]{
 background: url("./static/dice/k20.jpg");}
+
 label[for="k100"]{
   background: url("./static/dice/k100.jpg");}
 
-
-div.diceType:hover 
+input[type="radio"]+label:hover 
 {
 border-color: rgb(93, 248, 93);
 border-style: solid;
@@ -169,7 +160,6 @@ border-style: solid;
 
 .one-record{
   position: absolute;
-  
 }
 
 @media all and (min-width:480px) and (max-width:800px) {

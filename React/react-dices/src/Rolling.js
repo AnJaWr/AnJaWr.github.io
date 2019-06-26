@@ -29,25 +29,19 @@ class Rolling extends Component {
     }
 
 
-    // setType = curDicesType => {
-    //     console.log(curDicesType);
-    //     this.setState({ dicesType: curDicesType });
-
-    // }
-
     render() {
         return (
             <div className="dices-container">
                 <div className="left">
-                    <SetDicesType setType={this.setType}
-                    // SetDices={this.setNewDicesType} 
-                    />
+                    <SetDicesType setType={this.setType} />
                     <SetAmount setCounter={this.setAmount} />
                 </div>
                 <div className="right">
                     <RecordsList
                         amount={this.state.dicesAmount}
                         type={this.state.dicesType} />
+
+                    {/* <button onClick={console.log(this.state.dicesAmount, this.state.dicesType)}>Klik test</button> */}
                 </div>
                 <footer className="App-footer"> Napisano w ReactJS </footer>
             </div>

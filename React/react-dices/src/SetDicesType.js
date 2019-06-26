@@ -29,58 +29,22 @@ class SetDicesType extends Component {
                 <form>
 
 
-                    <input type="radio" name="dice" id="k4" value="4" ref={inputk4 => this.refdicestype = inputk4} onClick={this.handleClick} />
+                    <input type="radio" name="dice" id="k4" value="4" ref={inputk4 => this.refdicestype = inputk4} onChange={this.handleClick} />
                     <label htmlFor="k4"> </label>
 
-                    <input type="radio" name="dice" id="k6" value="6" ref={inputk6 => this.refdicestype = inputk6} onClick={this.handleClick} />
+                    <input type="radio" name="dice" id="k6" value="6" ref={inputk6 => this.refdicestype = inputk6} onChange={this.handleClick} />
                     <label htmlFor="k6"> </label>
 
-                    <input type="radio" name="dice" id="k8" value="8" ref={inputk8 => this.refdicestype = inputk8} onClick={this.handleClick} />
+                    <input type="radio" name="dice" id="k8" value="8" ref={inputk8 => this.refdicestype = inputk8} onChange={this.handleClick} />
                     <label htmlFor="k8"> </label>
 
-                    <input type="radio" name="dice" id="k10" value="10" ref={inputk10 => this.refdicestype = inputk10} onClick={this.handleClick} />
-                    <label htmlFor="k10"> </label>
+                    <input type="radio" name="dice" id="k10" value="10" ref={inputk10 => this.refdicestype = inputk10} onChange={this.handleClick} /><label htmlFor="k10"> </label>
 
-                    <input type="radio" name="dice" id="k12" value="12" ref={inputk12 => this.refdicestype = inputk12} onClick={this.handleClick} />
-                    <label htmlFor="k12"> </label>
-                    <input type="radio" name="dice" id="k20" value="20" ref={inputk20 => this.refdicestype = inputk20} onClick={this.handleClick} />
-                    <label htmlFor="k100"> </label>
+                    <input type="radio" name="dice" id="k12" value="12" ref={inputk12 => this.refdicestype = inputk12} onChange={() => { this.props.setType(parseInt(this.refdicestype.value)) }} /> <label htmlFor="k12"> </label>
 
-                    {/* {/* 
-<input type="radio"
-name="dice"
-id="k6"
-value={6}
-ref={() => this.dicesType = 4}
-checked={this.props.setType}
-// onClick={() => { this.setDicesType() }} 
-/>
-<label htmlFor="k6"></label> */}
+                    <input type="radio" name="dice" id="k20" value="20" ref={inputk20 => this.refdicestype = inputk20} onChange={this.handleClick} /><label htmlFor="k20"> </label>
 
-                    {/* <input type="radio" name="dice" id="k8" value="8" ref={input => this.refdicestype = input} onChange={this.handleClick} />
-                    <label htmlFor="k8"></label> */}
-
-
-                    {/* 
-<input type="radio" name='dice' id="k10" value={10} ref="10" onClick={() => {
-// this.setState({ dicesType: 10 });
-console.log(this.type.value);
-}} /><label htmlFor="k10"></label>
-
-<input type="radio" name='dice' id="k12" value="12" ref="12" onClick={() => {
-this.setState({ dicesType: 12 });
-}} /><label htmlFor="k12"></label>
-
-<input type="radio" name='dice' id="k20" value="20"
-ref="20" onClick={() => {
-this.setState({ dicesType: 20 });
-}} /><label htmlFor="k20"></label>
-
-<input type="radio" name='dice' id="k100" value="100" ref="100" onClick={(e) => {
-this.setState({ dicesType: 100 });
-}} /><label htmlFor="k100"></label> */}
-
-                    <button onClick={() => { console.log(this.state.dicesType) }}>klik test</button>
+                    <input type="radio" name="dice" id="k100" value="100" ref={inputk20 => this.refdicestype = inputk20} onChange={this.handleClick} /><label htmlFor="k100"> </label>
                 </form>
             </div>
 

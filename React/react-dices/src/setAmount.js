@@ -13,13 +13,15 @@ class SetAmount extends Component {
 
     render() {
         return (
-            <div className="dices-amount">
-                <label htmlFor="number" > Ilość kości: </label>
-                <input name="number" type="number" ref={input => this.dicesAmount = input} min="1" max="12" placeholder="0" onChange={() => { this.setAmount() }} />
-
-
-
+            <div>
+                <form>
+                    <label htmlFor="number" > Ilość kości:</label>
+                    <input name="number" type="number" ref={input => this.dicesAmount = input} min="1" max="12" placeholder="0" onChange={() => { this.setAmount() }} />
+                </form>
             </div>
+
+
+
 
         );
     }
