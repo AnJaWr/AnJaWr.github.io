@@ -12,7 +12,8 @@ const RecordsList = (props) => {
                 <p>Ilość kości: {props.amount}</p>
                 <p> Typ kości: {props.type}</p>
                 <input type="button" value="Rzucaj!"
-                    onClick={props.setDivs()} />
+                    // onClick={props.setDivs()} 
+                    />
 
 
             </div>

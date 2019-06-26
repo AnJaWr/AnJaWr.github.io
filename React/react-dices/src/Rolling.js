@@ -13,11 +13,23 @@ class Rolling extends Component {
         this.state = {
             dicesAmount: 0,
             dicesType: 0,
+            list: [],
 
         };
 
         this.setType = this.setType.bind(this);
+        this.setList = this.setList.bind(this);
     }
+
+    setList() {
+        this.setState(state => {
+            const list = state.list.concat(state.dicesAmount);
+
+            return {
+                list
+            };
+        });
+    };
 
     setAmount = newAmount => {
         console.log(newAmount);
@@ -30,7 +42,7 @@ class Rolling extends Component {
 
     }
     setDivs = () => {
-       Array(this.state.dicesAmount).fill(<Divs />)
+        Array(this.state.dicesAmount).fill(<Divs />)
         console.log("Klik obslugiwany");
     }
 
@@ -39,13 +51,15 @@ class Rolling extends Component {
             <div className="dices-container">
                 <div className="left">
                     <SetDicesType setType={this.setType} />
-                    <SetAmount setCounter={this.setAmount} />
+                    <SetAmount setCounter={this.setAmount}
+                        setList={this.setList}
+                    />
                 </div>
                 <div className="right">
                     <RecordsList
                         amount={this.state.dicesAmount}
                         type={this.state.dicesType}
-                        setDivs={this.setDivs} />
+                    />
                 </div>
 
                 <footer className="App-footer"> Napisano w ReactJS </footer>

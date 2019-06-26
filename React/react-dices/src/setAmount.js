@@ -6,7 +6,8 @@ class SetAmount extends Component {
 
 
     setAmount = () => {
-        this.props.setCounter(parseInt(this.dicesAmount.value))
+        this.props.setCounter(parseInt(this.dicesAmount.value));
+        this.props.setList() 
     };
 
 
@@ -16,7 +17,7 @@ class SetAmount extends Component {
             <div>
                 <form>
                     <label htmlFor="number" > Ilość kości:</label>
-                    <input name="number" type="number" ref={input => this.dicesAmount = input} min="0" max="12" placeholder="0" onChange={() => { this.setAmount() }} />
+                    <input name="number" type="number" ref={input => this.dicesAmount = input} min="1" max="12" placeholder="0" onChange={() => { this.setAmount()}} />
                 </form>
             </div>
 
