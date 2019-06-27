@@ -10,8 +10,9 @@ const RecordsList = (props) => {
 
         return (
             <div className="records">
+                <p> Typ kości: k{props.type}</p>
                 <p>Ilość kości: {props.amount}</p>
-                <p> Typ kości: {props.type}</p>
+
                 <Divs amount={props.amount}
                     diceList={props.diceList}
                     type={props.type} />
