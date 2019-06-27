@@ -7,33 +7,26 @@ import RecordsList from './RecordsList'
 
 
 
+
 class Rolling extends Component {
     constructor(props) {
         super(props);
         this.state = {
             dicesAmount: 0,
             dicesType: 0,
-            list: [],
+            diceList: [],
 
         };
 
         this.setType = this.setType.bind(this);
-        this.setList = this.setList.bind(this);
+
     }
 
-    setList() {
-        this.setState(state => {
-            const list = state.list.concat(state.dicesAmount);
-
-            return {
-                list
-            };
-        });
-    };
 
     setAmount = newAmount => {
         console.log(newAmount);
         this.setState({ dicesAmount: newAmount });
+       this.setState({ diceList: Array(newAmount).fill("item")});
     };
 
     setType(curDicesType) {
@@ -49,15 +42,15 @@ class Rolling extends Component {
                 <div className="left">
                     <SetDicesType setType={this.setType} />
                     <SetAmount setCounter={this.setAmount}
-                        setList={this.setList}
                     />
                 </div>
                 <div className="right">
                     <RecordsList
                         amount={this.state.dicesAmount}
                         type={this.state.dicesType}
-                        list={this.state.list}
+                        diceList={this.state.diceList}
                     />
+
                 </div>
 
                 <footer className="App-footer"> Napisano w ReactJS </footer>

@@ -13,7 +13,7 @@ const RecordsList = (props) => {
                 <p>Ilość kości: {props.amount}</p>
                 <p> Typ kości: {props.type}</p>
                 <Divs amount={props.amount}
-                    list={props.list}
+                    diceList={props.diceList}
                     type={props.type} />
 
 
