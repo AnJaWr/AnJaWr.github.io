@@ -269,10 +269,10 @@ class App extends Component {
               <div className="main col-md-12 col-xs-12">
                 <div className="container">
                   <div className="row">
-                    <div className="col-md-5 col-xs-12 title-container">
+                    <div className="col-md-6 col-xs-12 title-container">
                       <Titles />
                     </div>
-                    <div className="col-md-7 col-xs-12 form-container">
+                    <div className="col-md-6 col-xs-12 form-container">
                       <ErrorBonduary>
                         <Form
                           getWeather={this.getWeather}

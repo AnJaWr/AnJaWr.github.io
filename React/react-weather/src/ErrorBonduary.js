@@ -5,17 +5,13 @@ class ErrorBonduary extends Component {
         super(props);
         this.state = {
             error: null,
-
         }
     }
 
     componentDidCatch(error) {
         this.setState({
             error: error
-
         });
-
-
     }
 
     render() {

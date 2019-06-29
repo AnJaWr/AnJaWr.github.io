@@ -5,6 +5,7 @@ class Popup extends React.Component {
     state = {
         city: this.props.city,
         hour: undefined,
+
         // one
         icon1: undefined,
         day1: undefined,
@@ -13,7 +14,6 @@ class Popup extends React.Component {
         icon2: undefined,
         day2: undefined,
         temp2: undefined,
-
         // three
         icon3: undefined,
         day3: undefined,
@@ -26,13 +26,8 @@ class Popup extends React.Component {
         icon5: undefined,
         day5: undefined,
         temp5: undefined,
-
-
-
-
-
-
     }
+
     setCity = (newCity) => {
         this.setState({ city: newCity })
     }
@@ -66,12 +61,9 @@ class Popup extends React.Component {
         console.log(newhour);
     }
 
-
-
     getWeatherForSeven = async (e) => {
         const city = this.props.city
         const api_call = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric`);
-
 
         const data = await api_call.json()
         if (city) {
@@ -83,41 +75,26 @@ class Popup extends React.Component {
                 icon1: `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`,
                 day1: data.list[0].dt_txt,
                 temp1: data.list[0].main.temp,
-
                 // two
                 icon2: `http://openweathermap.org/img/wn/${data.list[8].weather[0].icon}@2x.png`,
                 day2: data.list[8].dt_txt,
                 temp2: data.list[8].main.temp,
-
-
-
                 // three
                 icon3: `http://openweathermap.org/img/wn/${data.list[16].weather[0].icon}@2x.png`,
                 day3: data.list[16].dt_txt,
                 temp3: data.list[16].main.temp,
-
                 // four
                 icon4: `http://openweathermap.org/img/wn/${data.list[24].weather[0].icon}@2x.png`,
                 day4: data.list[24].dt_txt,
                 temp4: data.list[24].main.temp,
-
                 //five
                 icon5: `http://openweathermap.org/img/wn/${data.list[32].weather[0].icon}@2x.png`,
                 day5: data.list[32].dt_txt,
                 temp5: data.list[32].main.temp,
 
-
-
-
-
-            }
-
-            );
-
+            });
         }
         this.setData()
-
-
     };
 
     componentDidMount() {
@@ -128,22 +105,21 @@ class Popup extends React.Component {
         return (
             <div className='popup' >
                 <div className="main__popup">
-                    <div className="container">
+                    <div className="container__popup">
                         <div className="row__popup">
                             <div className="col-md-12 col-xs-12 container">
-                                <h1 className="title__popup">{this.props.city}
-                                </h1>
-                                <h2 className="title__popup">{this.state.hour}
-                                </h2>
+                                <h1 className="title__popup">{this.props.city}</h1>
+
+                                <h2 className="title__popup"><span>Godzina:{this.state.hour}</span></h2>
                                 <button className="button__popup" onClick={this.props.closePopup}>X</button>
                             </div>
 
 
                             <div className="col-md-4 col-xs-4 panel-container">
                                 <div className="popup__inner">
+
                                     <p>{this.state.day1}</p>
                                     <p>{<img src={this.state.icon1} alt="icona" />}</p>
-                                    <p>Temperatura o tej porze:</p>
                                     <p>{this.state.temp1}&deg;C</p>
 
                                 </div>
@@ -153,7 +129,6 @@ class Popup extends React.Component {
                                 <div className="popup__inner">
                                     <p>{this.state.day2}</p>
                                     <p>{<img src={this.state.icon2} alt="icona" />}</p>
-                                    <p>Temperatura o tej porze:</p>
                                     <p>{this.state.temp2}&deg;C</p>
                                 </div>
                             </div>
@@ -162,7 +137,6 @@ class Popup extends React.Component {
                                 <div className="popup__inner">
                                     <p>{this.state.day3}</p>
                                     <p>{<img src={this.state.icon3} alt="icona" />}</p>
-                                    <p>Temperatura o tej porze:</p>
                                     <p>{this.state.temp3}&deg;C</p>
                                 </div>
                             </div>
@@ -171,7 +145,6 @@ class Popup extends React.Component {
                                 <div className="popup__inner">
                                     <p>{this.state.day4}</p>
                                     <p>{<img src={this.state.icon4} alt="icona" />}</p>
-                                    <p>Temperatura o tej porze:</p>
                                     <p>{this.state.temp4}&deg;C</p>
                                 </div>
                             </div>
@@ -180,31 +153,26 @@ class Popup extends React.Component {
                                 <div className="popup__inner">
                                     <p>{this.state.day5}</p>
                                     <p>{<img src={this.state.icon5} alt="icona" />}</p>
-                                    <p>Temperatura o tej porze:</p>
                                     <p>{this.state.temp5}&deg;C</p>
                                 </div>
                             </div>
-
-
-                        </div></div>
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
-
-
-
         );
     }
 }
-//...........................................................................
+/*========================FiveDaysComponent======================== */
 
 
 
-class SevenDays extends Component {
+class FiveDays extends Component {
     state = {
         city: this.props.city,
+        showPopup: false
     }
+
     togglePopup = () => {
         this.setState({
             showPopup: !this.state.showPopup,
@@ -217,7 +185,7 @@ class SevenDays extends Component {
         return (
 
             <div >
-                <button onClick={this.togglePopup}> Pogoda na 7 dni</button>
+                <button onClick={this.togglePopup}> Pogoda na 5 dni</button>
                 {this.state.showPopup ?
                     <Popup
                         closePopup={this.togglePopup}
@@ -230,4 +198,4 @@ class SevenDays extends Component {
         )
     }
 }
-export default SevenDays
+export default FiveDays
