@@ -142,22 +142,48 @@ button:active {
 /* --------------------Panel for SevenDays-------------------------- */
 
 /* <Popup> */
+.title__popup{
+  display: inline;
+}
 
+
+
+.button__popup{
+position: absolute;
+right: 0;
+}
+h2.title__popup {
+  font-size: calc(10px + 0.5vh);
+}
+
+.main__popup{
+position: static;
+margin-right: 50%;
+display: flex;
+top: 3vh;
+left: 2vw;
+background-color: rgba(212, 198, 65, 0.918);
+width: 100%
+}
 
 .popup {
   position: absolute;
   display: flex;
   align-self: center;
-  right: 5%;
-  top: 10%;
-  width: 80%;
-  height: 80%;
-  /* margin: auto; */
-  background-color: rgba(212, 198, 65, 0.918);
+  justify-items: center;
+  align-items: center;
+  top: 0;
+  right: 10px;
+  width: 100%;
+
+ 
 }
 .popup__inner {
   background: white;
-    width: 80%;
+  width: 80%;
+}
+.popup__inner p{
+  font-size: calc(10px + .5vw);
 }
 
 /* </Popup> */

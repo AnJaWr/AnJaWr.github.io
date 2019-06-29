@@ -4,32 +4,31 @@ const API_KEY = "f525ab2b08b02345263cf7db59107bee"
 class Popup extends React.Component {
     state = {
         city: this.props.city,
+        hour: undefined,
         // one
-        icon: undefined,
-        day: undefined,
-        tempNight: undefined,
-        tempDay: undefined,
-        error: undefined,
+        icon1: undefined,
+        day1: undefined,
+        temp1: undefined,
         // two
         icon2: undefined,
         day2: undefined,
-        tempNight2: undefined,
-        tempDay2: undefined,
+        temp2: undefined,
+
         // three
         icon3: undefined,
         day3: undefined,
-        tempNight3: undefined,
-        tempDay3: undefined,
+        temp3: undefined,
         // four
         icon4: undefined,
         day4: undefined,
-        tempNight4: undefined,
-        tempDay4: undefined,
+        temp4: undefined,
         // five
         icon5: undefined,
         day5: undefined,
-        tempNight5: undefined,
-        tempDay5: undefined,
+        temp5: undefined,
+
+
+
 
 
 
@@ -37,6 +36,37 @@ class Popup extends React.Component {
     setCity = (newCity) => {
         this.setState({ city: newCity })
     }
+
+    setData = () => {
+        var data1 = this.state.day1;
+        console.log(data1);
+        var newdata1 = data1.slice(0, 10);
+        this.setState({ day1: newdata1 })
+
+        var data2 = this.state.day2;
+        var newdata2 = data2.slice(0, 10);
+        this.setState({ day2: newdata2 })
+
+        var data3 = this.state.day3;
+        var newdata3 = data3.slice(0, 10);
+        this.setState({ day3: newdata3 })
+
+        var data4 = this.state.day4;
+        var newdata4 = data4.slice(0, 10);
+        this.setState({ day4: newdata4 })
+
+        var data5 = this.state.day5;
+        var newdata5 = data5.slice(0, 10);
+        this.setState({ day5: newdata5 })
+
+        var hour = this.state.hour
+        console.log(hour);
+        var newhour = hour.slice(11, 16);
+        this.setState({ hour: newhour })
+        console.log(newhour);
+    }
+
+
 
     getWeatherForSeven = async (e) => {
         const city = this.props.city
@@ -48,47 +78,50 @@ class Popup extends React.Component {
             console.log(data);
 
             this.setState({
-                icon: `http://openweathermap.org/img/wn/${data.list[4].weather[0].icon}@2x.png`,
-                day: data.list[0].dt_txt,
-                tempNight: data.list[0].main.temp,
-                tempDay: data.list[4].main.temp,
-                error: undefined,
+                hour: data.list[0].dt_txt,
+                // one
+                icon1: `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`,
+                day1: data.list[0].dt_txt,
+                temp1: data.list[0].main.temp,
+
                 // two
-                icon2: `http://openweathermap.org/img/wn/${data.list[12].weather[0].icon}@2x.png`,
+                icon2: `http://openweathermap.org/img/wn/${data.list[8].weather[0].icon}@2x.png`,
                 day2: data.list[8].dt_txt,
-                tempNight2: data.list[8].main.temp,
-                tempDay2: data.list[12].main.temp,
+                temp2: data.list[8].main.temp,
+
 
 
                 // three
-                icon3: `http://openweathermap.org/img/wn/${data.list[20].weather[0].icon}@2x.png`,
+                icon3: `http://openweathermap.org/img/wn/${data.list[16].weather[0].icon}@2x.png`,
                 day3: data.list[16].dt_txt,
-                tempNight3: data.list[16].main.temp,
-                tempDay3: data.list[20].main.temp,
+                temp3: data.list[16].main.temp,
 
                 // four
-                icon4: `http://openweathermap.org/img/wn/${data.list[28].weather[0].icon}@2x.png`,
+                icon4: `http://openweathermap.org/img/wn/${data.list[24].weather[0].icon}@2x.png`,
                 day4: data.list[24].dt_txt,
-                tempNight4: data.list[24].main.temp,
-                tempDay4: data.list[28].main.temp,
+                temp4: data.list[24].main.temp,
 
                 //five
-                icon5: `http://openweathermap.org/img/wn/${data.list[36].weather[0].icon}@2x.png`,
+                icon5: `http://openweathermap.org/img/wn/${data.list[32].weather[0].icon}@2x.png`,
                 day5: data.list[32].dt_txt,
-                tempNight5: data.list[32].main.temp,
-                tempDay5: data.list[36].main.temp,
+                temp5: data.list[32].main.temp,
 
 
 
 
 
-            });
+            }
+
+            );
+
         }
+        this.setData()
+
+
     };
 
     componentDidMount() {
         this.getWeatherForSeven()
-
     }
 
     render() {
@@ -96,61 +129,66 @@ class Popup extends React.Component {
             <div className='popup' >
                 <div className="main__popup">
                     <div className="container">
-                        <div className="row">
-                            <div className="col-md-12 col-xs-12 panel-container">
-                                <p>Lokacja: {this.props.city}</p>
+                        <div className="row__popup">
+                            <div className="col-md-12 col-xs-12 container">
+                                <h1 className="title__popup">{this.props.city}
+                                </h1>
+                                <h2 className="title__popup">{this.state.hour}
+                                </h2>
+                                <button className="button__popup" onClick={this.props.closePopup}>X</button>
                             </div>
 
 
-                            <div className="col-md-3 col-xs-3 panel-container">
+                            <div className="col-md-4 col-xs-4 panel-container">
                                 <div className="popup__inner">
-                                    <p>Data:{this.state.day}</p>
-                                    <p>{<img src={this.state.icon} alt="icona" />}</p>
-                                    <p>Noc: {this.state.tempNight}*C</p>
-                                    <p>Dzień: {this.state.tempDay}*C</p>
+                                    <p>{this.state.day1}</p>
+                                    <p>{<img src={this.state.icon1} alt="icona" />}</p>
+                                    <p>Temperatura o tej porze:</p>
+                                    <p>{this.state.temp1}&deg;C</p>
+
                                 </div>
                             </div>
 
-                            <div className="col-md-3 col-xs-3 panel-container">
+                            <div className="col-md-4 col-xs-4 panel-container">
                                 <div className="popup__inner">
-                                    <p>Data:{this.state.day2}</p>
+                                    <p>{this.state.day2}</p>
                                     <p>{<img src={this.state.icon2} alt="icona" />}</p>
-                                    <p>Noc:{this.state.tempNight2}*C</p>
-                                    <p>Dzień:{this.state.tempDay2}*C</p>
+                                    <p>Temperatura o tej porze:</p>
+                                    <p>{this.state.temp2}&deg;C</p>
                                 </div>
                             </div>
 
-                            <div className="col-md-3 col-xs-3 panel-container">
+                            <div className="col-md-4 col-xs-4 panel-container">
                                 <div className="popup__inner">
-                                    <p>Data:{this.state.day3}</p>
+                                    <p>{this.state.day3}</p>
                                     <p>{<img src={this.state.icon3} alt="icona" />}</p>
-                                    <p>Noc:{this.state.tempNight3}*C</p>
-                                    <p>Dzień: {this.state.tempDay3}*C</p>
+                                    <p>Temperatura o tej porze:</p>
+                                    <p>{this.state.temp3}&deg;C</p>
                                 </div>
                             </div>
 
-                            <div className="col-md-3 col-xs-3 panel-container">
+                            <div className="col-md-4 col-xs-4 panel-container">
                                 <div className="popup__inner">
-                                    <p>Data:{this.state.day4}</p>
+                                    <p>{this.state.day4}</p>
                                     <p>{<img src={this.state.icon4} alt="icona" />}</p>
-                                    <p>Noc:{this.state.tempNight4}*C</p>
-                                    <p>Dzień: {this.state.tempDay4}*C</p>
+                                    <p>Temperatura o tej porze:</p>
+                                    <p>{this.state.temp4}&deg;C</p>
                                 </div>
                             </div>
 
-                            <div className="col-md-3 col-xs-3 panel-container">
+                            <div className="col-md-4 col-xs-4 panel-container">
                                 <div className="popup__inner">
-                                    <p>Data:{this.state.day5}</p>
+                                    <p>{this.state.day5}</p>
                                     <p>{<img src={this.state.icon5} alt="icona" />}</p>
-                                    <p>Noc:{this.state.tempNight5}*C</p>
-                                    <p>Dzień: {this.state.tempDay5}*C</p>
+                                    <p>Temperatura o tej porze:</p>
+                                    <p>{this.state.temp5}&deg;C</p>
                                 </div>
                             </div>
 
 
                         </div></div>
                 </div>
-                <button onClick={this.props.closePopup}>X</button>
+
 
             </div>
 
