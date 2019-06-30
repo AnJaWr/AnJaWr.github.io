@@ -59,7 +59,7 @@ margin-top: 4vh;
 
 /* ===== form component ===== */
 .form {
-  padding-top: 5%;
+
   padding-left: 5%;
 }
 .form-container {
@@ -123,7 +123,7 @@ button:hover, button:focus, button:active  {
 .weather__key {
   color: #f16051;
   border-bottom: solid 2px rgba(255,255,255,0.06);
-  padding: 20px 0 20px 0;
+  padding: 10px 0 10px 0;
   font-weight: 400;
 }
 .weather__key:last-child {
@@ -151,27 +151,21 @@ button:hover, button:focus, button:active  {
 .title__popup{
   display: inline;
 }
-
 .container__popup{
   padding: 4%;
   width: 100%;
 }
-
 .button__popup{
 position: absolute;
 right: 0;
 }
-
-
 h2.title__popup {
   font-size: calc(10px + 0.5vh);
 }
-
 .container span{
   padding-left: 5%;
     font-size: calc(10px + 0.5vh);
 }
-
 .main__popup{
 position: absolute;
 display: flex;
@@ -179,13 +173,11 @@ background-color: rgb(212, 198, 65);
 width: 100%;  
 box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
 }
-
 .popup {
   position: absolute;
   top: 7%;
   width:90%;
 }
-
 .popup__inner {
   border-radius: 10px;
   background: white;
@@ -204,8 +196,8 @@ box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
 .panel-container{
   padding: 1vw 0.5vw;
 }
-/* </Popup> */
 
+/* </Popup> */
 
 
 
@@ -217,7 +209,6 @@ box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
     margin: 0;
     padding: 0;
   }
-
 div.row{
     margin: 0;
 display: block;
@@ -236,27 +227,21 @@ justify-self: center
   position: relative;
   top:0;
 }
-
 .title-container__title {
   font-size: 30px;
 }
-
 .title-container__subtitle {
   padding: 2vh
 }
-
 .form-container {
-
   height: 100%;
 }
 .weather__key,
 .weather__info {
   font-size: calc(14px + .5vw);
 }
-
 button {
  display: block;
- 
 }
 div.main.col-xs-12{
   margin: 0;
@@ -268,19 +253,17 @@ div.container{
 }
 }
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 797px) {
 
 div.row{
     margin: 0;
 display: block;
 justify-content: center
   }
-
 .main {
   display: block;
   justify-content: center;
 }
-
 .title-container {
   height: 30vw;
   position: relative;
@@ -290,35 +273,34 @@ justify-content: center
 .title-container__title {
   font-size: 30px;
 }
-
 .title-container__subtitle {
   padding: 2vh
 }
-
 .form-container {
   height: 100%;
 }
-
 .weather__key,
 .weather__info {
   font-size: calc(14px + .5vw);
 }
-
 button {
  display: block;
 }
-
 div.main.col-xs-12{
   margin: 0;
   padding: 0
 }
-
 .col-md-5{
   float: none;
 }
 div.container{
   display: flex;
   justify-items: center;
-
 }
+
+.container {
+width: 100%;
+justify-content: center;
+}
+
 }
