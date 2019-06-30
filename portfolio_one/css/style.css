@@ -1,0 +1,516 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+div#header {
+    background-color: #f2f1ed;
+    background-image: url("../img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 5vh;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 5vh;
+    margin-top: 10vh;
+}
+
+header h2 {
+    margin-top: 5vh;
+}
+
+hr {
+    border: 1px solid #007bff;
+    width: 20vh;
+}
+
+nav {
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+}
+
+span {
+    content: "\2022";
+    color: #007bff;
+}
+
+button {
+    border: 1px solid #007bff;
+    outline: none;
+    background-color: #f2f1ed;
+    padding: 20px;
+    color: #333;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+button:hover {
+    color: #f2f1ed;
+    background-color: #007bff;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 10vh;
+    transition: 0.5s;
+}
+
+li a:hover {
+    color: blue;
+}
+
+li a:active {
+    color: darkblue;
+}
+
+
+/* sekcja "O mnie" */
+
+#about {
+    margin-top: 20vh;
+}
+
+section#about_me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20vh;
+}
+
+#my_photo {
+    height: 40vh;
+    width: 40vh;
+    border-radius: 50%;
+    background-image: url('../img/about.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    margin-top: 10vh;
+}
+
+#text_about {
+    width: 50%;
+    text-align: center;
+}
+
+section#about_me button {
+    border: 1px solid #007bff;
+    outline: none;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    color: #333;
+    transition: 1s ease-in;
+}
+
+section#about_me button:hover {
+    color: #f2f1ed;
+    background-color: #007bff;
+}
+
+
+/* Portfolio */
+
+section#portfolio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f1ed;
+}
+
+#portfolio h2,
+#contact h2 {
+    margin-top: 20vh;
+}
+
+#portfolio hr,
+#contact hr {
+    margin-bottom: 8vh;
+}
+
+#gallery {
+    width: 80%;
+    margin: 0;
+    font-size: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+    position: relative;
+}
+
+div.photo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    width: 25%;
+    height: 25vh;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0%;
+    position: relative;
+}
+
+.one {
+    background-image: url("../img/portfolio/photo-1.jpg");
+}
+
+.two {
+    background-image: url("../img/portfolio/photo-2.jpg");
+}
+
+.three {
+    background-image: url("../img/portfolio/photo-3.jpg");
+}
+
+.four {
+    background-image: url("../img/portfolio/photo-4.jpg");
+}
+
+.five {
+    background-image: url("../img/portfolio/photo-5.jpg");
+}
+
+.six {
+    background-image: url("../img/portfolio/photo-6.jpg");
+}
+
+.seven {
+    background-image: url("../img/portfolio/photo-7.jpg");
+}
+
+.eight {
+    background-image: url("../img/portfolio/photo-8.jpg");
+}
+
+.nine {
+    background-image: url("../img/portfolio/photo-9.jpg");
+}
+
+.ten {
+    background-image: url("../img/portfolio/photo-10.jpg");
+}
+
+.eleven {
+    background-image: url("../img/portfolio/photo-11.jpg");
+}
+
+.twelve {
+    background-image: url("../img/portfolio/photo-12.jpg");
+}
+
+section#portfolio {
+    padding-bottom: 10vh;
+}
+
+div.a {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 123, 255);
+    opacity: 0;
+    position: absolute;
+    transition: 0.5s ease-in;
+}
+
+
+/* fade */
+
+div.photo:hover .a {
+    opacity: 0.6;
+}
+
+
+/* mask sweep to bottom */
+
+div.b {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+div.b:before {
+    content: "";
+    background-color: rgba(0, 123, 255, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition-property: transform;
+    transition-duration: 0.3s;
+}
+
+div.b:hover:before,
+div.b:focus:before,
+div.b:active:before {
+    transform: scaleY(1);
+}
+
+
+/* Shutter In Horizontal */
+
+div.c {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-duration: 0.3s;
+}
+
+div.c:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 123, 255, 0.6);
+    transform: scaleX(0);
+    transform-origin: 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+div.c:hover:before,
+div.c:focus:before,
+div.c:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
+/* KONTAKT */
+
+section#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+div#formularz {
+    width: 45%;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"] {
+    margin-bottom: 3vh;
+    width: 46%;
+    padding: 3%;
+}
+
+textarea {
+    width: 100%;
+    height: 20vh;
+    overflow: auto;
+    padding: 3%;
+}
+
+section#contact button {
+    border: 1px solid #007bff;
+    outline: none;
+    background-color: white;
+    padding: 20px;
+    color: #333;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s ease-in;
+}
+
+section#contact button:hover {
+    color: #f2f1ed;
+    background-color: #007bff;
+}
+
+div#socialmedia ul {
+    list-style-type: none;
+}
+
+div#socialmedia ul li a {
+    margin: 2vh;
+    padding: 1vh;
+}
+
+.fa {
+    padding: 5vh;
+    font-size: 6vh;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+.fa:hover {
+    opacity: 0.5;
+}
+
+.fa-facebook {
+    color: #007bff;
+}
+
+.fa-twitter {
+    color: #007bff;
+}
+
+.fa-youtube {
+    color: #007bff;
+}
+
+.fa-instagram {
+    color: #007bff;
+}
+
+
+/* FOOTER */
+
+footer .fa-copyright {
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    width: initial;
+}
+
+footer {
+    background-color: #f2f1ed;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #333;
+}
+
+div#footer {
+    height: 10vh;
+    text-align: center;
+    color: #333;
+}
+
+
+/*..................... ekrany 768- 991px.............. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    div.photo {
+        width: 50%;
+        height: 25%vh;
+    }
+    div#formularz {
+        width: 80%;
+    }
+    input[type="text"],
+    input[type="email"] {
+        padding: 3%;
+    }
+}
+
+
+/* ...............ekrany 480-767 px*....................*/
+
+@media (min-width:480px) and (max-width:767px) {
+    li a {
+        margin: 1vw;
+        padding: 1vw;
+    }
+    div.photo {
+        width: 100%;
+        height: 50vh;
+    }
+    div#gallery {
+        width: 96%;
+    }
+    div#formularz {
+        width: 100%;
+    }
+    form {
+        margin: 1%;
+    }
+    input[type="text"],
+    input[type="email"] {
+        width: 48%;
+    }
+}
+
+
+/* ...............ekrany do 480px*....................*/
+
+@media (max-width: 480px) {
+    li a {
+        margin: 1vw;
+        padding: 1vw;
+    }
+    div#gallery {
+        width: 98%;
+    }
+    div.photo {
+        width: 100%;
+        height: 35vh;
+    }
+    div#formularz {
+        width: 100%;
+    }
+    form {
+        margin: 1%;
+    }
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+    }
+    div#socialmedia ul li a {
+        margin: 0;
+        margin-bottom: 3Vh;
+    }
+    div#footer {
+        font-size: 3vw;
+    }
+}
