@@ -1,0 +1,39 @@
+#baza {
+width: 600px;
+height: 600px;
+background-color: green;
+position: relative;
+}
+
+div[title^="kwadrat"] {
+width: 20%;
+height: 20%;
+background-color: orange;
+position: absolute;
+}
+
+div[title^="kolo"] {
+width: 50%;
+height: 50%;
+background-color: blue;
+border-radius: 50%;
+position: absolute;
+}
+
+div[title~="gora"] {
+position: absolute;
+top: 0px;
+}
+
+div[title~="dol"] {
+position: absolute;
+bottom: 0;
+}
+
+div[title~="prawo"] {
+right: 0;
+}
+
+div[title~="lewo"]{
+left: 0;
+}

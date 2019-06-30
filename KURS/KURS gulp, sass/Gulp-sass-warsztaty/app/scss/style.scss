@@ -1,0 +1,164 @@
+$font-family-main: "Open Sans";
+$formbackground-color: #001d8a;
+$color-decor: #ecd407;
+$footer-background: #292929;
+$bodyfont-color: #fff;
+$breakepoint-1: 768px;
+$fontsmall: 10px;
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family-main;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+}
+///* nagłówek */
+h1,
+h2,
+h3 {
+  color: $bodyfont-color;
+}
+
+.header {
+  background-color: transparent;
+  width: 100%;
+  height: 5vh;
+  color: $bodyfont-color;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 10px;
+}
+
+.header__left {
+  display: inline-block;
+  h1 {
+    display: inline;
+  }
+}
+
+.header__right {
+  display: inline-block;
+  h3 {
+    font-size: 14px;
+  }
+
+  h5 {
+    font-size: 10px;
+  }
+  .fa-phone {
+    transform: rotate(90deg);
+  }
+}
+
+.fa-university {
+  color: $color-decor;
+  font-size: 32px;
+}
+// ----------------------------------formularz------------------
+.card-body {
+  width: 35%;
+}
+input,
+textarea {
+  font-size: 10px;
+  color: #ccc;
+  width: 90%;
+  border-radius: 0%;
+}
+
+input:focus {
+  border: 0;
+  outline: 0;
+}
+
+h4,
+h5 {
+  color: white;
+  font-weight: bolder;
+}
+
+.form {
+  width: 35%;
+  background: $formbackground-color;
+  padding: 2vh;
+  line-height: 0%;
+}
+
+.btn {
+  margin-top: 15px;
+  background: $color-decor;
+  color: black;
+  display: block;
+  width: 25%;
+  border: none;
+  padding: 1vh;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+/* Stopka */
+.contact {
+  margin-top: 1%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__inside {
+  font-size: $fontsmall;
+  justify-content: center;
+  display: flex;
+  width: 5vh;
+  height: 5vh;
+  background-color: $color-decor;
+  padding: 1vh;
+  text-align: center;
+}
+
+span {
+  color: $color-decor;
+}
+
+.fa-phone {
+  color: $bodyfont-color;
+  font-size: 32px;
+}
+
+.fa-envelope {
+  color: $footer-background;
+  font-size: 32px;
+}
+
+footer {
+  width: 100%;
+  height: 20vh;
+  background: $footer-background;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .fa-phone {
+    color: $footer-background;
+  }
+
+  .credits {
+    position: relative;
+    margin-top: 3vh;
+    width: 80%;
+  }
+  p {
+    color: $bodyfont-color;
+    font-size: 12px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: white;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width:1170px) {
+    header {
+        background-image: url("../img/man-1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-transform: uppercase;
+        height: 100vh;
+        color: white;
+        justify-content: center;
+        align-content: center;
+    }
+    #naglowek_txt {
+        margin-left: 2%;
+    }
+}
+
+@media (min-width:992px) and (max-width:1170px) {
+    header {
+        background-image: url("../img/man-2.jpg");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        height: 70vh;
+        justify-content: flex-start;
+        align-items: flex-end;
+        align-content: flex-end;
+       
+    }
+    #naglowek_txt {
+        margin-left: 0;
+        margin-right: 2vw;
+        margin-top: 20vh;
+    }
+}
+
+@media (max-width:991px) {
+    header {
+        
+        color: black;
+        height: 100vh;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    div#naglowek {
+        background-image: url(../img/man-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50%;
+    }
+    div#naglowek_txt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h2 {
+        font-size: 3vw;
+    }
+    h1 {
+        font-size: 4vw;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza time!!!</title>
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
+    <form action="">
+     <label for="name" id="name-label">Imię: </label>   <input type="text" name="name" id="name">
+     <label for="surname" id="surname-label">Nazwisko: </label>     <input type="text" name="surname" id="surname">
+     <label for="street">Ulica: </label>    <input type="text" name="street" id="street">
+     <label for="houseNumber">Numer domu/mieszkania: </label>  <input type="text" name="houseNumber" id="houseNumber">
+     <label for="post">Kod pocztowy: </label>  <input type="text" name="post" id="post">
+     <label for="City">Miejscowość</label>  <input type="text" name="city" id="city">
+     <label for="pizza">Pizza</label>  <select name="pizza" id="pizza"aria-placeholder="--wybierz Pizzę--">
+            <option selected>--- Wybierz pizzę ---</option>
+            <option value="hawajska">Pizza Hawajska</option>
+            <option value="capri">Pizza Capriciosa</option>
+            <option value="salami">Pizza Salami</option>
+            <option value="frutti">Pizza Frutti di Mare</option>
+            <option value="marga">Pizza Margaritha</option>
+        </select>
+     Wybierz sos: 
+        <input type="checkbox" name="garlic" id="garlic">   <label for="garlic">Czosnkowy</label>  
+        <input type="checkbox" name="totmato" id="tomato">   <label for="tomato">Pomidorowy</label>
+        <br>  
+        
+        <div id="order">
+     <h2>Zamówienie:</h2>
+        </div>
+        <button type="submit">Wyślij zamówienie</button>
+        <input type="checkbox" name="agree" id="agree">   <label for="agree">Wyrażam zgodę na przetwarzanie danych osobowyh</label>  
+        <br>
+    </form>
+    
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+<!-- 
+- Pizza (do wyboru 5 rodzajów Pizzy – każda w innej cenie) - pole to ma ustawioną domyślną
+wartość "-- Wybierz Pizzę --". Po wyborze zamawianej pizzy, powinna wyświetlić się jej cena
+(np. jako tekst w paragrafie)
+- 2 pola wyboru sosów (pomidorowy i czosnkowy) (najlepiej jako checkbox'y)
+- Zgoda na przetwarzanie danych – checkbox (musi być zgoda na relizacje zamówienia)
+Za pomocą jQuery zrób walidację formularza. Walidator ma sprawdzać:
+- czy wszystkie pola zostały wypełnione? Jeśli nie, to zwracać odpowiedni komunikat
+- czy została wybrana Pizza przy zamówieniu? Jeśli nie, to zwracany odpowiedni komunikat
+Na końcu -->

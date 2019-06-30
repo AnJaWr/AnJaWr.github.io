@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=B, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" >
+    <!-- Bootstrap przed stylami, by nam nie nadpisywał! -->
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+<body>
+
+<!-- buttony -->
+<div class="py-5">
+<button class="btn btn-primary btn-lg">button 1</button>
+<button class="btn btn-outline-warning btn-sm">button 2</button>
+<button class="btn btn-link">button 3</button>
+<button class="btn btn-danger">button 4</button>
+<button class="btn">button 5</button>
+</div>
+
+
+    <!-- grid -->
+    <!-- grid wymaga odpowiedniej struktury
+    container/container-fluid: elementy .row > elementy .col 
+nie modyfikuj siatki marginesami etc. bo się rozwali-->
+
+    <div class="container">
+        <div class="row">
+            <div class="item col-lg-4 col-md-6 col-sm-2 col-6 text-centern text-uppercase">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum magnam nulla velit officiis repellat quae esse delectus cum. Incidunt voluptatibus, laborum sequi impedit facere quia! Cum doloribus consectetur corrupti?
+            </div>
+            <!-- 
+
+> 992px układ 3 kolumny 12/4 (lg)
+>768 && <962px układ 2 kol. 12/6 (md)
+>576&& <768px układ 12/2 (sm)
+<576 układ 12/6 (bez prefiksu)
+
+
+             -->
+            <div class="item col-lg-4 col-md-6 text-right">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque perspiciatis eos neque quas fugiat sed architecto error porro aliquam ex, itaque repellendus soluta non, nisi dolorem corporis necessitatibus rerum animi.
+            </div>
+            <div class="item col-lg-4 text-capitalize">
+                <!-- kazda pierwsza litera duża -->
+                lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat odit id ex placeat repudiandae voluptatum cupiditate laborum dolorem, pariatur neque sed et vero numquam, perspiciatis facere exercitationem repellat quod non.</div>
+        </div>
+    </div>
+    <!-- /grid -->
+    <!-- konternery -->
+    <!-- <div class="container"></div>
+    <div class="container-fluid"></div> -->
+    <!-- /kontenery -->
+
+</body>
+</html>
+
+<!-- fajne slidery: slickslider i  swiper idangero.us/swiper
+framework7.io -->

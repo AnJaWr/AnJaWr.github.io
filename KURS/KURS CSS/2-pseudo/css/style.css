@@ -1,0 +1,48 @@
+.akapit::before {
+    content: 'PRZED TEKSTEM';
+    color: red; 
+}
+
+.akapit::after {
+    content: "Tekst dodany za tekstem";
+    color: green;
+}
+
+.akapit::first-line { 
+    color: lawngreen;
+}
+/* ....................................... */
+
+.customer-list_item {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.customer-list_item:first-child {
+    color: lawngreen;
+    font-size: 30px;
+}
+
+.customer-list_item:nth-child(6) {
+    background-color: black
+}
+
+ .customer-list_item:nth-child(3n+4) {  /* co 3 elementy od 4 */
+    color: darkgreen;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+input:focus {
+    border: 1px solid red;
+    border-radius:  15px;
+    outline: none;
+}
+
+button:hover{
+    background-color: greenyellow;
+}
+
+button:active {
+    background-color: green;
+}

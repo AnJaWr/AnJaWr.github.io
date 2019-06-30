@@ -1,0 +1,52 @@
+html {
+    font-size: 15px;
+}
+
+* {
+padding: 0;
+margin: 0;
+}
+
+.size-px {
+    width: 400px;
+    height: 200px;
+    background: rgb(29, 214, 143);
+}
+
+.size-pr {
+    width: 60%;
+    height: 200px;
+    background: greenyellow;
+}
+
+.size-vh {
+    width: 50vh;
+    height: 200px;
+    background: goldenrod;
+}
+
+.size-vw{
+    width: 50vw;
+    height: 200px;
+    background:  rgba(214, 29, 189, 0.527);
+    position: relative;
+    top: -60px;
+    left: 60px;
+}
+
+.em {
+    font-size: 30px;
+}
+
+.em p {
+    font-size: 2em;
+}
+
+.rem {
+    font-size: 3em;
+}
+
+
+.rem p {
+    font-size: 1em;}
+/* 1rem=15px bo html  został ustawiony na 15px */

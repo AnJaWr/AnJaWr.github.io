@@ -1,0 +1,86 @@
+body {
+    background: #fff url(../img/kwaity.jpg) no-repeat right top fixed;
+    font-family: Helvetica;
+    color: #fff;
+    margin: 10px 15px;
+}
+label{
+    padding: 1%;
+    display: block;
+}
+
+label[for="male"],
+label[for="female"],
+label[for="agree"] {
+    display: inline-block;
+    padding: 1%;
+}
+
+
+form {
+    width: 45%;
+    background-color:  rgba(107, 10, 70, 0.8);
+    margin: 5px, 15px;
+    padding: 2%;
+}
+
+input[type="text"], 
+input[type="email"],
+input[type="tel"],
+select {
+    display: block;
+    margin: 5px;
+    width:45%;
+    padding: 1%;
+    border: none;
+    border-radius: 25px;
+} 
+
+input[type="radius"] {
+    color: rgb(255, 153, 255); 
+}
+
+select:focus,
+input:focus {
+    color: #000;
+    outline: 0;
+    background-color: rgb(255, 153, 204);
+    border: 2px solid rgb(102, 0, 102);
+    border-radius: 25px;
+    } 
+
+textarea:focus {
+    outline: 0;
+    color: #000;
+    background-color: rgb(255, 153, 204);
+    border: 2px solid rgb(102, 0, 102);
+}
+
+textarea {
+    width: 80%;
+    height: 140px;
+}
+
+input[type="submit"] {
+    display:inline-block;
+    margin-top: 10px;
+    border: 0px;
+    padding: 10px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: rgb(102, 0, 102);
+    color: white;
+    border-radius: 0px;
+    }
+
+input[type="submit"]:active,
+input[type="submit"]:focus {
+    display:inline-block;
+    margin-top: 10px;
+    border: 0px;
+    padding: 10px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: rgb(255, 153, 204);
+    color: rgb(77, 0, 38);
+    }
