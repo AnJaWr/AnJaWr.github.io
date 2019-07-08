@@ -1,22 +1,41 @@
 import React, { Component } from "react";
 import { Col } from 'react-grid-system';
+import NumericInput from 'react-numeric-input';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
+
 
 
 class SetK8 extends Component {
+    constructor() {
+        super();
+        this.state = {
+            k4: false,
+        };
+    }
 
     render() {
         return (
-            <Col xs={6} md={3} lg={1}>
-                <form >
-                    <input type="radio" id="k8" value="8" ref={inputk8 => this.refk8 = inputk8} onChange={() => {
-                        this.props.setType(parseInt(this.refk8.value))
-                    }} />
-                    <label className="dice k8_vik" htmlFor="k8"> </label>
+            <Col xs={6} md={3} lg={1} >
+                <Form >
+                    <FormGroup check className="col__main">
+                        <Input type="checkbox" id="k8" />{' '}
+                        <Label className="dice k8 vik" htmlFor="k8" check> </Label>
+                        <NumericInput min={0} max={100} mobile={true} size={3} value={this.state.value}
 
-                </form>
+                            onChange={
+                                value => {
+                                    this.setState({ value })
+                                    this.props.setAmK8(value)
+
+                                }}
+                        />
+
+                    </FormGroup>
+                </Form>
+
             </Col>
         )
     }
 }
 
-export default SetK8;
+export default SetK8

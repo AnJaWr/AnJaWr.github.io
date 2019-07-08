@@ -82,34 +82,50 @@ label, .form-control {
 
 /*=======================  dices settings =========================*/
 
-.k4_vik{
-  background: url("./static/dice/k4.jpg");
-/* background-size: cover */
+
+/* W I K I N G S  */
+
+.k4.vik{
+  background: url("./static/dice/vik/k4.jpg");
+background-size: cover;
 }
 
-.k6_vik{
-  background: url("./static/dice/k6.jpg");
+.k6.vik{
+  background: url("./static/dice/vik/k6.jpg");
 background-size: cover}
 
-.k8_vik{
-  background: url("./static/dice/k8.jpg");
+.k8.vik{
+  background: url("./static/dice/vik/k8.jpg");
 background-size: cover}
 
-.k10_vik{
-background: url("./static/dice/k10.jpg");
+.k10.vik{
+background: url("./static/dice/vik/k10.jpg");
 background-size: cover}
 
-.k12_vik{
-background: url("./static/dice/k12.jpg");
+.k12.vik{
+background: url("./static/dice/vik/k12.jpg");
 background-size: cover}
 
-.k20_vik{
-background: url("./static/dice/k20.jpg");
+.k20.vik{
+background: url("./static/dice/vik/k20.jpg");
 background-size: cover}
 
-.k100_vik{
-  background: url("./static/dice/k100.jpg");
+.k100.vik{
+  background: url("./static/dice/vik/k100.jpg");
 background-size: cover}
+
+
+/* C L A S S I C */
+
+
+
+
+
+
+
+
+
+
 
 
 label {
@@ -143,27 +159,27 @@ background-size: cover ;
 }
 
 
-label[for="k4"]{
-  background: url("./static/dice/k4.jpg");
+/* label[for="k4"]{
+  background: url("./static/dice/classic/k4.jpg");
 background-size: contain}
 
 label[for="k6"]{
-  background: url("./static/dice/k6.jpg");}
+  background: url("./static/dice/classic/k6.jpg");}
 
 label[for="k8"]{
-  background: url("./static/dice/k8.jpg");}
+  background: url("./static/dice/classic/k8.jpg");}
 
 label[for="k10"]{
-background: url("./static/dice/k10.jpg");}
+background: url("./static/dice/classic/k10.jpg");}
 
 label[for="k12"]{
-background: url("./static/dice/k12.jpg");}
+background: url("./static/dice/classic/k12.jpg");}
 
 label[for="k20"]{
-background: url("./static/dice/k20.jpg");}
+background: url("./static/dice/classic/k20.jpg");}
 
 label[for="k100"]{
-  background: url("./static/dice/k100.jpg");}
+  background: url("./static/dice/classic/k100.jpg");} */
 
 
 /* dices label */

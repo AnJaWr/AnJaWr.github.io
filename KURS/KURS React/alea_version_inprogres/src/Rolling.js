@@ -19,7 +19,7 @@ class Rolling extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            choseSet: undefined,
+            setting: "classic",
 
             setK4: undefined,
             setK6: undefined,
@@ -39,21 +39,131 @@ class Rolling extends Component {
 
 
             k4List: [],
+            k6List: [],
+            k8List: [],
+            k10List: [],
+            k12List: [],
+            k20List: [],
+            k100List: [],
         };
     }
 
     setAmK4 = newAmount => {
-                try {
-                    console.log(newAmount);
-                    this.setState({ setK4Amount: newAmount });
-                    this.setState({ k4List: Array(newAmount).fill("k4") });
-                }
-                catch (error) {
-                    this.setState({
-                        setK4Amount: 0
-                    });
-                }
-            };
+        try {
+            console.log(newAmount);
+            this.setState({ setK4Amount: newAmount });
+            this.setState({ k4List: Array(newAmount).fill("k4") });
+        }
+        catch (error) {
+            this.setState({
+                setK4Amount: 0
+            });
+        }
+    };
+
+
+    setAmK6 = newAmount => {
+        try {
+            this.setState({ setK6Amount: newAmount });
+            this.setState({ k6List: Array(newAmount).fill("k6") });
+        }
+        catch (error) {
+            this.setState({
+                setK6Amount: 0
+            });
+        }
+    };
+
+    setAmK8 = newAmount => {
+        try {
+            this.setState({ setK8Amount: newAmount });
+            this.setState({ k8List: Array(newAmount).fill("k8") });
+        }
+        catch (error) {
+            this.setState({
+                setK8Amount: 0
+            });
+        }
+    };
+
+    setAmK10 = newAmount => {
+        try {
+            this.setState({ setK10Amount: newAmount });
+            this.setState({ k6List: Array(newAmount).fill("k10") });
+        }
+        catch (error) {
+            this.setState({
+                setK10Amount: 0
+            });
+        }
+    };
+
+
+
+    setAmK12 = newAmount => {
+        try {
+            this.setState({ setK12Amount: newAmount });
+            this.setState({ k12List: Array(newAmount).fill("k12") });
+        }
+        catch (error) {
+            this.setState({
+                setK12Amount: 0
+            });
+        }
+    };
+
+    setAmK20 = newAmount => {
+        try {
+            this.setState({ setK20Amount: newAmount });
+            this.setState({ k20List: Array(newAmount).fill("k20") });
+        }
+        catch (error) {
+            this.setState({
+                setK20Amount: 0
+            });
+        }
+    };
+
+
+    setAmK100 = newAmount => {
+        try {
+            this.setState({ setK100Amount: newAmount });
+            this.setState({ k100List: Array(newAmount).fill("k100") });
+        }
+        catch (error) {
+            this.setState({
+                setK100Amount: 0
+            });
+        }
+    };
+
+
+    changeSetting = newSetting => {
+        try {
+            this.setState({ setting: newSetting });
+            console.log(newSetting);
+        }
+        catch (error) {
+            this.setState({
+                setting: "classic"
+            });
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -63,7 +173,8 @@ class Rolling extends Component {
                 <Row>
                     <Col>
 
-                        <Setting />
+                        <Setting
+                            changeSetting={this.changeSetting} />
                     </Col>
                 </Row>
 
@@ -72,37 +183,42 @@ class Rolling extends Component {
 
                         <SetK4
                             setAmK4={this.setAmK4}
-
                         />
 
                     </Col>
                     <Col>
-                        <SetK6 />
+                        <SetK6
+                            setAmK6={this.setAmK6}
+                        />
+                    </Col>
+                    <Col>
+                        <SetK8
+                            setAmK8={this.setAmK8}
+                        />
                     </Col>
                     <Col>
 
 
-                        <SetK8 />
+
+                        <SetK10
+                            setAmK10={this.setAmK10}
+                        />
                     </Col>
                     <Col>
 
 
-
-                        <SetK10 />
+                        <SetK12 setAmK12={this.setAmK12}
+                        />
                     </Col>
                     <Col>
 
 
-                        <SetK12 />
+                        <SetK20 setAmK20={this.setAmK20}
+                        />
                     </Col>
                     <Col>
 
-
-                        <SetK20 />
-                    </Col>
-                    <Col>
-
-                        <SetK100 />
+                        <SetK100 setAmK100={this.setAmK100} />
                     </Col>
 
                 </Row>

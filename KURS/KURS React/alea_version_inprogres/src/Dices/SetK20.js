@@ -1,22 +1,41 @@
 import React, { Component } from "react";
 import { Col } from 'react-grid-system';
+import NumericInput from 'react-numeric-input';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
+
+
 
 class SetK20 extends Component {
-
+    constructor() {
+        super();
+        this.state = {
+            k4: false,
+        };
+    }
 
     render() {
         return (
-            <Col xs={6} md={3} lg={1}>
-                <form >
-                    <input type="radio" id="k20" value="20" ref={inputk20 => this.refk20 = inputk20} onChange={() => {
-                        this.props.setType(parseInt(this.refk20.value))
-                    }} />
-                    <label className="dice k20_vik" htmlFor="k20"> </label>
+            <Col xs={6} md={3} lg={1} >
+                <Form >
+                    <FormGroup check className="col__main">
+                        <Input type="checkbox" id="k20" />{' '}
+                        <Label className="dice k20 vik" htmlFor="k20" check> </Label>
+                        <NumericInput min={0} max={100} mobile={true} size={3} value={this.state.value}
 
-                </form>
+                            onChange={
+                                value => {
+                                    this.setState({ value })
+                                    this.props.setAmK20(value)
+
+                                }}
+                        />
+
+                    </FormGroup>
+                </Form>
+
             </Col>
         )
     }
 }
 
-export default SetK20;
+export default SetK20

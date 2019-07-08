@@ -25,15 +25,15 @@ class SetK4 extends Component {
                 <Form >
                     <FormGroup check className="col__main">
                         <Input type="checkbox" id="k4" />{' '}
-                        <Label className="dice k4_vik" htmlFor="k4" check> </Label>
-                        <NumericInput  min={0} max={100} mobile={true} size={3} value={this.state.value} 
-                        
-                        onChange={
-                        value => { 
-                            this.setState({ value })
-                            this.props.setAmK4(value)
-                    
-                    }}
+                        <Label className="dice k4 vik" htmlFor="k4" check> </Label>
+                        <NumericInput min={0} max={100} mobile={true} size={3} value={this.state.value}
+
+                            onChange={
+                                value => {
+                                    this.setState({ value })
+                                    this.props.setAmK4(value)
+
+                                }}
                         />
 
                     </FormGroup>
@@ -44,4 +44,4 @@ class SetK4 extends Component {
     }
 }
 
-export default SetK4   
+export default SetK4  

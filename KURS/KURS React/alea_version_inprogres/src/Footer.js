@@ -1,6 +1,5 @@
 import React from "react";
 import { GiDiceEightFacesEight } from 'react-icons/gi';        
-import { Row } from 'react-grid-system';
 
 const Footer = (props) => {
     return (
