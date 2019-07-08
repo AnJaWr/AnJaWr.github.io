@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif+Caption&display=swap');
+
+
+/* ===========       loader      ======================= */
+
+.loading{
+ width: 100%;
+ height: 100vh;
+ background: black;
+text-align: center;
+padding: 200px 0 0 0;
+}
+
+.animation{
+    font-size: 200px;
+    color: white;
+}
+
+#animation {
+		animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
+}
+
+
+/* =========== main App settings ======================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0}
+
+
+body {
+    background: white;
+font-family: 'PT Serif Caption', serif;}
+
+.dice {
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+}
+
+.App-header {
+  background-color: #1dbadf;;
+  color: white;
+}
+
+.App-footer {
+  background-color: black;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  color: white;
+  clear: both;
+  position: absolute;
+  width: 100%
+}
+
+
+.title__header{
+  font-size: calc(45px + 2vmin);
+ font-family: 'Dancing Script', cursive;
+  padding: 1%;
+  margin: 2px;
+  text-align: center;
+}
+
+label, .form-control {
+  font-family: 'PT Serif Caption', serif;
+}
+
+
+/*=======================  dices settings =========================*/
+
+.k4_vik{
+  background: url("./static/dice/k4.jpg");
+/* background-size: cover */
+}
+
+.k6_vik{
+  background: url("./static/dice/k6.jpg");
+background-size: cover}
+
+.k8_vik{
+  background: url("./static/dice/k8.jpg");
+background-size: cover}
+
+.k10_vik{
+background: url("./static/dice/k10.jpg");
+background-size: cover}
+
+.k12_vik{
+background: url("./static/dice/k12.jpg");
+background-size: cover}
+
+.k20_vik{
+background: url("./static/dice/k20.jpg");
+background-size: cover}
+
+.k100_vik{
+  background: url("./static/dice/k100.jpg");
+background-size: cover}
+
+
+label {
+  font-size: calc(8px + 1vh);
+  padding: 1%;
+  margin: 2px;
+  margin-bottom: 10px;
+  color: rgb(61, 68, 165);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+position: relative;
+right: 22px;
+}
+.form-control {
+  border-color: #1dbadf;
+  outline: #1dbadf;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type=checkbox]+label{
+height: 150px;
+width: 150px;
+display:inline-block;
+padding: 0 0 0 0px;
+position: relative;
+margin: 3px;
+background-size: cover ;
+}
+
+
+label[for="k4"]{
+  background: url("./static/dice/k4.jpg");
+background-size: contain}
+
+label[for="k6"]{
+  background: url("./static/dice/k6.jpg");}
+
+label[for="k8"]{
+  background: url("./static/dice/k8.jpg");}
+
+label[for="k10"]{
+background: url("./static/dice/k10.jpg");}
+
+label[for="k12"]{
+background: url("./static/dice/k12.jpg");}
+
+label[for="k20"]{
+background: url("./static/dice/k20.jpg");}
+
+label[for="k100"]{
+  background: url("./static/dice/k100.jpg");}
+
+
+/* dices label */
+/* .k4{
+  background: url("./static/dice/k4s.jpg");
+  background-size: cover;
+}
+.k6{
+  background: url("./static/dice/k6s.jpg");
+  background-size: cover;
+}
+.k8{
+  background: url("./static/dice/k8s.jpg");
+    background-size: cover;
+  }
+.k10{
+background: url("./static/dice/k10s.jpg");
+  background-size: cover;}
+
+.k12{
+background: url("./static/dice/k12s.jpg");
+  background-size: cover;}
+.k20{
+background: url("./static/dice/k20s.jpg");
+  background-size: cover;}
+.k100{
+  background: url("./static/dice/k100s.jpg");
+  background-size: cover;
+} */
+
+
+input[type=checkbox]:hover+label 
+{
+border-color:#1dbadf;
+border-style: solid;
+border-width: 1px;
+transition: 0.5s;
+cursor: pointer;
+}
+
+input[type=checkbox]:checked+label{
+
+border:  #1dbadf solid; 
+border-radius: 25%;
+border-width: 5px;
+}
+
+
+/*-<=====================Cols=============================> */
+.col__main{
+  display: flex;
+  justify-content: center;
+}
