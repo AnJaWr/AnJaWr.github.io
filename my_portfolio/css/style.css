@@ -56,7 +56,7 @@ nav a{
   color: white;
 }
 header {
-  background-image: url(/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg)
+  background-image: url("/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg")
 }
 p {
   margin-bottom: 12px; }
