@@ -55,7 +55,7 @@ a {
 nav a{
   color: white;
 }
-header {
+#my_portfolio-header{
   background: url(../images/cover_bg_3.jpg);
 }
 p {
