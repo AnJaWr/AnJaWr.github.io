@@ -32,7 +32,7 @@
 			});
 		}
 	};
-//parallax
+	//parallax
 	var parallax = function () {
 		$(window).stellar();
 	};
@@ -74,7 +74,18 @@
 	};
 
 
+	var skillsWayPoint = function () {
+		if ($('#my_portfolio-skills').length > 0) {
+			$('#my_portfolio-skills').waypoint(function (direction) {
 
+				if (direction === 'down' && !$(this.element).hasClass('animated')) {
+					setTimeout(pieChart, 400);
+					$(this.element).addClass('animated');
+				}
+			}, { offset: '90%' });
+		}
+
+	};
 
 
 	var contentWayPoint = function () {
