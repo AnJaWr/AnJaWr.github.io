@@ -35,6 +35,11 @@ body {
       background: rgba(0, 0, 0, 0.7);
       content: ""; }
 
+ .navbar .navbar-nav > li > a {
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: nowrap;}
+
 a {
   color: #154f85;
   -webkit-transition: 0.5s;
@@ -46,6 +51,12 @@ a {
     text-decoration: none; }
 .col-md-8 p {
   text-align: justify;
+}
+nav a{
+  color: white;
+}
+header {
+  background-image: url(/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg)
 }
 p {
   margin-bottom: 12px; }
@@ -81,16 +92,20 @@ text-transform: uppercase
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(21, 79, 133, 0.9); }
+    background: rgba(21, 79, 133, 0.3); }
   #my_portfolio-header .display-t,
   .my_portfolio-cover .display-t {
     width: 100%;
-    display: table; }
+    display: table;
+    margin-top: 20%;
+;
+ }
   #my_portfolio-header .display-tc,
   .my_portfolio-cover .display-tc {
     display: table-cell;
     vertical-align: middle;
-    height: 600px; }
+    height: 600px; 
+  }
     #my_portfolio-header .display-tc h1, #my_portfolio-header .display-tc h2, #my_portfolio-header .display-tc h3,
     .my_portfolio-cover .display-tc h1,
     .my_portfolio-cover .display-tc h2,
@@ -113,7 +128,8 @@ text-transform: uppercase
       #my_portfolio-header .display-tc h1 span,
       .my_portfolio-cover .display-tc h1 span {
         padding: 4px 15px;
-        position: relative; }
+        position: relative; 
+      }
         #my_portfolio-header .display-tc h1 span:before,
         .my_portfolio-cover .display-tc h1 span:before {
           position: absolute;
@@ -162,20 +178,15 @@ text-transform: uppercase
         #my_portfolio-header .display-tc h3,
         .my_portfolio-cover .display-tc h3 {
           font-size: 14px; } }
-    #my_portfolio-header .display-tc .profile-thumb,
-    .my_portfolio-cover .display-tc .profile-thumb {
-      background-size: cover !important;
-      background-position: center center;
-      background-repeat: no-repeat;
+    #my_portfolio-header .display-tc,
+    .my_portfolio-cover .display-tc {
+        background-color: rgba(0, 0, 0, 0.3);
       position: relative;
       height: 300px;
       width: 300px;
       margin: 0 auto;
       margin-bottom: 30px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      border-radius: 50%; }
+    }
     #my_portfolio-header .display-tc .my_portfolio-social-icons li a,
     .my_portfolio-cover .display-tc .my_portfolio-social-icons li a {
       color: #fff; }
@@ -187,6 +198,25 @@ text-transform: uppercase
 -webkit-box-shadow: 0px 0px 18px -4px rgba(255,255,255,1);
 -moz-box-shadow: 0px 0px 18px -4px rgba(255,255,255,1);
 box-shadow: 0px 0px 18px -4px rgba(255,255,255,1);}
+
+.profile-thumb {
+   background-size: cover !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: relative;
+      height: 150px;
+      width: 150px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%; 
+}
+.js-fullheight{
+height: 100vh;
+width: 100%
+}
 
 /*  ====================== technologie ========================= */
 #my_portfolio-features {
@@ -679,13 +709,6 @@ input[type="text"] {
 .form-group {
   margin-bottom: 30px; }
 
-#map {
-  width: 100%;
-  height: 500px;
-  position: relative; }
-  @media screen and (max-width: 768px) {
-    #map {
-      height: 200px; } }
 
 .gototop {
   position: fixed;

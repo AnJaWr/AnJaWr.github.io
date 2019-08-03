@@ -19,13 +19,13 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Modernizr JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
+	<link rel="shortcut icon" type="image/png" href="/images/feather.png" />
 
 </head>
 
@@ -33,18 +33,40 @@
 	<!-- =========================================== header =========================================== -->
 	<div class="my_portfolio-loader"></div>
 
+
+	<!-- navigation panel -->
+
+	<nav class="navbar navbar-dark navbar-expand-md fixed-top  bg-primary justify-content-center">
+		<a class="navbar-brand d-flex w-50 mr-auto" href="#">Anna Wróbel</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse w-100 navbar-collapse" id="navbarSupportedContent">
+			<ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+				<li class="nav-item active"><a class="nav-link" href="#my_portfolio-about">O mnie</a></li>
+				<li class="nav-item active"><a class="nav-link" href="#my_portfolio-projects">Projekty</a></li>
+				<li class="nav-item active"><a class="nav-link" href="#my_portfolio-features">Technologie</a></li>
+				<li class="nav-item active"><a class="nav-link" href="#my_portfolio-work">Galeria</a></li>
+				<li class="nav-item active"><a class="nav-link" href="#my_portfolio-contact">Kontakt</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!--/ navigation panel -->
+	<!-- background-image Photo by Philipp Katzenberger https://unsplash.com/photos/iIJrUoeRoCQ-->
+
 	<div id="page">
-		<header id="my_portfolio-header" class="my_portfolio-cover js-fullheight" role="banner"
-			style="background: linear-gradient(45deg, rgba(0,34,46,1) 0%, rgba(33,180,226,1) 45%, rgba(113,206,239,1) 75%, rgba(183,222,237,1) 100%)">
+		<header id="my_portfolio" class="my_portfolio-cover js-fullheight">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row justify-content-md-center">
 					<div class="col-md-8
 					 col-md-offset-2 
 					 text-center">
-						<div class="display-t js-fullheight">
-							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-								<div class="profile-thumb" style="background:url(images/portfolio.png)"></div>
+						<div class="display-t">
+							<div class="display-tc animate-box" data-animate-effect="fadeIn">
+
 								<h1><span>Anna Wróbel</span></h1>
 								<h3><span>Front End Developer</span></h3>
 								<p>
@@ -52,8 +74,14 @@
 										<li><a href="https://www.linkedin.com/in/anna-wr%C3%B3bel-1a2336a2/"><i
 													class="fab fa-linkedin icon__header"></i></a></li>
 										<li><a href="https://github.com/AnJaWr"><i
-													class="fab fa-github icon__header"></i></i></a>
+													class="fab fa-github icon__header"></i></a>
 										</li>
+										<li><a href="mailto:annawrobel.frontend@gmail.com"><i
+													class="far fa-envelope"></i></a>
+										</li>
+
+
+
 									</ul>
 								</p>
 							</div>
@@ -72,17 +100,11 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4">
+
+					<div class="col-md-4 col-sm-12 col-xs-12">
+						<div class="profile-thumb" style="background:url(images/portfolio.png)"></div>
 						<ul class="info">
 							<li><span class="first-block">Imię:</span><span class="second-block">Anna Wróbel</span></li>
-							<li><span class="first-block">Telefon:</span><span class="second-block"><a
-										href="tel:+48506769939">+48 506 769
-										939</a></span>
-							</li>
-							<li><span class="first-block">Email:</span><span class="second-block"><a
-										href="mailto:annawrobel.frontend@gmail.com">annawrobel.frontend@gmail.com</a></span>
-							</li>
-
 							<li><span class="first-block">Adres:</span><span class="second-block">Warszawa</span></li>
 						</ul>
 					</div>
@@ -92,6 +114,7 @@
 							sama korzystając z dobrodziejstw Internetu. By ugruntować wiedzę i poznać niezbędne do pracy
 							narzędzia, ukończyłam kurs Front End Developer. Nadal się uczę. Wiem, że wiele nauki przede
 							mną - ale bardzo mi się to podoba.</p>
+
 						<p>Interesuję się także grafiką: rysunkiem odręcznym oraz cyfrowym. Rysuję w Photoshopie, Gimpie
 							czy Sketchu.</p>
 
@@ -120,7 +143,7 @@
 								</div>
 							</li>
 							<li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="fab fa-earlybirds"></i></div>
+								<div class="timeline-badge"><i class="fas fa-feather-alt"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Pogodynka</h3>
@@ -134,7 +157,7 @@
 								</div>
 							</li>
 							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge"><i class="fab fa-earlybirds"></i></div>
+								<div class="timeline-badge"><i class="fas fa-feather-alt"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Alea iacta est</h3>
@@ -149,7 +172,7 @@
 								</div>
 							</li>
 							<li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="fab fa-earlybirds"></i></div>
+								<div class="timeline-badge"><i class="fas fa-feather-alt"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">To do list</h3>
@@ -163,7 +186,7 @@
 								</div>
 							</li>
 							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge"><i class="fab fa-earlybirds"></i></div>
+								<div class="timeline-badge"><i class="fas fa-feather-alt"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Portfolio</h3>
@@ -177,7 +200,7 @@
 								</div>
 							</li>
 							<li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="fab fa-earlybirds"></i></div>
+								<div class="timeline-badge"><i class="fas fa-feather-alt"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Nieszczęśliwy Numerek</h3>
@@ -417,7 +440,7 @@
 		</div>
 		<!-- =========================================== formularz =========================================== -->
 		<!-- Bootstrap 4.1.1 Snippet by Danlouis9701 -->
-		<div class="container ">
+		<div class="container " id="my_portfolio-contact">
 			<div class="row justify-content-center">
 				<div class="col-12 col-md-10 col-lg-10 pb-5 pt-5 ">
 
@@ -456,7 +479,8 @@
 										<div class="input-group-prepend">
 											<div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
 										</div>
-										<textarea class="form-control" placeholder="Wiadomość ..." required></textarea>
+										<textarea id="info" name="info" class="form-control" placeholder="Wiadomość ..."
+											required></textarea>
 									</div>
 								</div>
 
@@ -479,7 +503,13 @@
 					<script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-sdk/1.0.5/stellar-sdk.min.js"></script>
 					<script
 						src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-					<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+						integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+						crossorigin="anonymous"></script>
+
+					<!-- <script src="js/bootstrap.min.js"></script> -->
+
 					<script
 						src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 					<script src="js/main.js"></script>
