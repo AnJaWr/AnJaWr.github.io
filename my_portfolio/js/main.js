@@ -23,21 +23,6 @@
 		}
 	};
 
-	var fullHeight = function () {
-
-		if (!isMobile.any()) {
-			$('.js-fullheight').css('height', $(window).height());
-			$(window).resize(function () {
-				$('.js-fullheight').css('height', $(window).height());
-			});
-		}
-	};
-
-	//parallax
-	var parallax = function () {
-		$(window).stellar();
-	};
-
 	var contentWayPoint = function () {
 		var i = 0;
 		$('.animate-box').waypoint(function (direction) {
@@ -160,13 +145,10 @@
 		$(".my_portfolio-loader").fadeOut("slow");
 	};
 
-
 	$(function () {
 		contentWayPoint();
 		goToTop();
 		loaderPage();
-		parallax();
-		fullHeight();
 		skillsWayPoint();
 
 	});

@@ -39,6 +39,11 @@ body {
     padding-left: 5px;
     padding-right: 5px;
     white-space: nowrap;}
+.navbar-toggler-icon{
+     background-image:url(/images/feather-white.png) !important;
+     width: 20px;
+     height: 20px;
+    }
 
 a {
   color: #154f85;
@@ -55,9 +60,7 @@ a {
 nav a{
   color: white;
 }
-header {
-  background: url(/images/cover_bg_3.jpg);
-}
+
 p {
   margin-bottom: 12px; }
 
@@ -77,22 +80,6 @@ text-transform: uppercase
   color: #fff;
   background: #154f85; }
 
-#my_portfolio-header,
-.my_portfolio-cover {
-  background-color: transparent;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  height: 600px;
-  width: 100%; }
-  #my_portfolio-header .overlay,
-  .my_portfolio-cover .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(21, 79, 133, 0.3); }
   #my_portfolio-header .display-t,
   .my_portfolio-cover .display-t {
     width: 100%;
@@ -106,14 +93,12 @@ text-transform: uppercase
     vertical-align: middle;
     height: 600px; 
   }
-    #my_portfolio-header .display-tc h1, #my_portfolio-header .display-tc h2, #my_portfolio-header .display-tc h3,
-    .my_portfolio-cover .display-tc h1,
-    .my_portfolio-cover .display-tc h2,
-    .my_portfolio-cover .display-tc h3 {
+    #my_portfolio-header .display-tc h1, 
+    #my_portfolio-header .display-tc h3 {
       margin: 0;
+      margin-top: 20px;
       padding: 0;
       color: white; }
-    #my_portfolio-header .display-tc h1,
     .my_portfolio-cover .display-tc h1 {
       font-family: "Kaushan Script", cursive;
       margin-bottom: 30px;
@@ -151,54 +136,65 @@ text-transform: uppercase
           background: #fff;
           margin-right: -30px; }
       @media screen and (max-width: 768px) {
-        #my_portfolio-header .display-tc h1,
-        .my_portfolio-cover .display-tc h1 {
+        #my_portfolio-header .display-tc h1 {
           font-size: 34px; }
-          #my_portfolio-header .display-tc h1 span:before,
-          .my_portfolio-cover .display-tc h1 span:before {
+          #my_portfolio-header .display-tc h1 span:before {
             top: 28px;
             width: 20px;
             height: 3px;
             margin-left: -15px; }
-          #my_portfolio-header .display-tc h1 span:after,
           .my_portfolio-cover .display-tc h1 span:after {
             top: 28px;
             width: 20px;
             height: 3px;
             margin-right: -15px; } }
-    #my_portfolio-header .display-tc h2,
-    .my_portfolio-cover .display-tc h2 {
-      font-size: 20px;
-      line-height: 1.5;
-      margin-bottom: 30px; }
-    #my_portfolio-header .display-tc h3,
     .my_portfolio-cover .display-tc h3 {
       font-size: 16px; }
       @media screen and (max-width: 768px) {
-        #my_portfolio-header .display-tc h3,
         .my_portfolio-cover .display-tc h3 {
           font-size: 14px; } }
-    #my_portfolio-header .display-tc,
-    .my_portfolio-cover .display-tc {
-        background-color: rgba(0, 0, 0, 0.3);
+    #my_portfolio-header .display-tc{
+        background-color: rgba(0, 0, 0, 0.411);
       position: relative;
       height: 300px;
       width: 300px;
       margin: 0 auto;
       margin-bottom: 30px;
     }
-    #my_portfolio-header .display-tc .my_portfolio-social-icons li a,
-    .my_portfolio-cover .display-tc .my_portfolio-social-icons li a {
+ ul.my_portfolio-social-icons {
+      margin-top: 20px;
+    }
+    #my_portfolio-header .display-tc .my_portfolio-social-icons li a {
       color: #fff; }
-      #my_portfolio-header .display-tc .my_portfolio-social-icons li a i,
-      .my_portfolio-cover .display-tc .my_portfolio-social-icons li a i {
+      #my_portfolio-header .display-tc .my_portfolio-social-icons li a i{
         font-size: 30px; }
 
   .icon__header:hover{
--webkit-box-shadow: 0px 0px 18px -4px rgba(255,255,255,1);
--moz-box-shadow: 0px 0px 18px -4px rgba(255,255,255,1);
-box-shadow: 0px 0px 18px -4px rgba(255,255,255,1);}
+-webkit-box-shadow: 0px 0px 53px 12px rgba(255,255,255,0.85);
+-moz-box-shadow: 0px 0px 53px 12px rgba(255,255,255,0.85);
+box-shadow: 0px 0px 53px 12px rgba(255,255,255,0.85);
+  }
 
+/* ----------------P A R A L A X A --------------------- */
+.paral {
+min-height: 600px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
+}
+
+
+
+/* Image for Parallax Section */ 
+.paralsec {
+background-image: url(/images/cover_bg_3.jpg);
+}
+
+
+/* Remove Bottom Margin from Jumbotron */
+.jumbotron{margin-bottom: 0;}
+
+/* -------------- A B O U T * M E--------------------- */
 .profile-thumb {
    background-size: cover !important;
       background-position: center center;
@@ -338,8 +334,7 @@ width: 100%
   .my_portfolio-heading.my_portfolio-heading-sm {
     margin-bottom: 2em; }
   .my_portfolio-heading h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     line-height: 1.25;
     color: #000; }
   .my_portfolio-heading p {
