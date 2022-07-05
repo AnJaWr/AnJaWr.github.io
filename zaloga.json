@@ -1,4 +1,6 @@
-﻿ [ 
+﻿{
+   
+   "members" : [
    {
    "imię": "Emmily",
    "nazwisko": "Raassmusen",
@@ -4576,4 +4578,4 @@
 "portret":"jpg/male.jpg"
 }
 
- ]
+ ]}
